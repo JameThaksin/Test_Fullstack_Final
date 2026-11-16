@@ -1,0 +1,1769 @@
+{
+  "title": "FULL STACK EXAM QUEST",
+  "subtitle": "Full Stack Web Development • Front-End + Backend + Database",
+  "version": "2.0.0",
+  "pageNote": "ไฟล์ .pdf อ้างอิงเลขหน้า PDF, ไฟล์ .pptx อ้างอิงเลขสไลด์, ไฟล์ .pdf.txt อ้างอิงเลขสไลด์ที่พิมพ์อยู่ในไฟล์ข้อความ",
+  "difficulties": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard"
+  },
+  "topics": {
+    "fe": "พื้นฐานเว็บ & Front-End",
+    "html": "HTML",
+    "css": "CSS",
+    "bs": "Bootstrap",
+    "js": "JavaScript",
+    "dom": "DOM & Events",
+    "node": "Node.js & Express",
+    "bp": "Body Parser & Async",
+    "api": "API & REST",
+    "db": "Database & SQL",
+    "mongo": "MongoDB & Security"
+  },
+  "sources": {
+    "intro": {
+      "file": "1.1-Course Introduction 1.pdf",
+      "kind": "pdf",
+      "total": 22
+    },
+    "fe": {
+      "file": "1.2-Front End Web Development.pdf",
+      "kind": "pdf",
+      "total": 16
+    },
+    "html": {
+      "file": "2 - HTML 2.pdf",
+      "kind": "pdf",
+      "total": 69
+    },
+    "css": {
+      "file": "3 - Intro to CSS.pptx",
+      "kind": "pptx",
+      "total": 174
+    },
+    "bs": {
+      "file": "4 - Introduction to Bootstrap.pptx",
+      "kind": "pptx",
+      "total": 103
+    },
+    "js": {
+      "file": "5 - Introduction to JavaScript 1.pdf",
+      "kind": "pdf",
+      "total": 67
+    },
+    "dom": {
+      "file": "6 - The Document Object Model DOM.pdf.txt",
+      "kind": "txt",
+      "total": 120
+    },
+    "be1": {
+      "file": "BE1 - Backend Web Development.pdf",
+      "kind": "pdf",
+      "total": 82
+    },
+    "be2": {
+      "file": "BE2 - Body Parser.pdf",
+      "kind": "pdf",
+      "total": 52
+    },
+    "be3": {
+      "file": "BE3 - API.pdf",
+      "kind": "pdf",
+      "total": 58
+    },
+    "be4": {
+      "file": "BE4 - Database.pdf.txt",
+      "kind": "txt",
+      "total": 265
+    },
+    "be7": {
+      "file": "BE7 - MongoDB.pdf",
+      "kind": "pdf",
+      "total": 54
+    }
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "difficulty": "easy",
+      "topic": "fe",
+      "question": "เพื่อนคนหนึ่งบอกว่า \"Full Stack คือการทำหน้าเว็บด้วย HTML, CSS และ JavaScript\" ข้อใดแก้ความเข้าใจนี้ได้ตรงกับสไลด์แนะนำรายวิชา",
+      "choices": [
+        "Full Stack = UX/UI + Software Testing",
+        "Full Stack = HTML5, CSS, JavaScript และ Bootstrap",
+        "Full Stack = Front-End Web Development + Backend Development + Database",
+        "Full Stack = Front-End + Backend ส่วน Database เป็นอีกวิชาหนึ่ง"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ \"เรียนอะไรบ้างในวิชานี้\" สรุปว่า Front-End Web Development + Backend Development + Database = Full Stack Web Development โดยแยกเทคโนโลยีเป็น Front-End (HTML5, CSS, JavaScript, Bootstrap, DOM ...), Back-End (Node.js, Express, EJS) และ Database (API, MongoDB)",
+      "choiceNotes": [
+        "UX/UI และ Software Testing เป็นหัวข้อของวิชา Selected Topic 2 (หน้า 21) ไม่ใช่นิยามของ Full Stack",
+        "รายการนี้เป็นเพียง Front-End Technology ซึ่งเป็นแค่ส่วนแรกของ Full Stack",
+        null,
+        "สไลด์เขียนสมการไว้ชัดว่า Database เป็นส่วนหนึ่งของ Full Stack ด้วย"
+      ],
+      "source": {
+        "doc": "intro",
+        "pages": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "Q02",
+      "difficulty": "easy",
+      "topic": "fe",
+      "question": "ทำไม Client จึงต้องผ่าน DNS Server ก่อนจะส่ง Request ไปยัง google.com ได้",
+      "choices": [
+        "เพราะ Request ต้องส่งไปที่ IP Address และ DNS ช่วยหา IP ของ google.com",
+        "เพราะ DNS Server คือผู้ให้บริการอินเทอร์เน็ตที่เชื่อม Client เข้ากับ Internet Backbone",
+        "เพราะ DNS Server เป็นผู้แปลง HTML/CSS ที่ได้รับแล้วแสดงผลออกมาเป็นหน้าเว็บ",
+        "เพราะ DNS Server เป็นเครื่องที่เก็บไฟล์เว็บไซต์ของ Google ไว้"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ THE INTERNET ระบุว่า DNS Server ทำหน้าที่หาว่า google.com มี IP Address อะไร และคอมพิวเตอร์ทุกตัวที่ออนไลน์จะมี IP Address จากนั้นจึง Direct request ไปยัง IP นั้น (หน้า 7)",
+      "choiceNotes": [
+        null,
+        "ผู้ให้บริการอินเทอร์เน็ตคือ ISP (Internet Service Provider) ซึ่งอยู่คนละกล่องกับ DNS ในแผนภาพ",
+        "การแสดงผล (Render) เป็นหน้าที่ของ Web Browser (หน้า 9)",
+        "เครื่องที่เก็บข้อมูลและให้บริการตลอด 24 ชั่วโมงคือ Server (หน้า 4) ส่วน DNS ทำหน้าที่หา IP เท่านั้น"
+      ],
+      "source": {
+        "doc": "fe",
+        "pages": [
+          4,
+          6,
+          7
+        ]
+      }
+    },
+    {
+      "id": "Q03",
+      "difficulty": "easy",
+      "topic": "fe",
+      "question": "หน้าเว็บหนึ่งแสดงหัวข้อและข้อความครบ แต่ไม่มีสีหรือการจัดวางใด ๆ และกดปุ่มแล้วไม่มีอะไรเกิดขึ้น ไฟล์ใดน่าจะโหลดสำเร็จเพียงไฟล์เดียว",
+      "choices": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "ทั้ง CSS และ JavaScript"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ WHY 3 TYPE OF FILES? แบ่งหน้าที่ว่า HTML กำหนดโครงสร้าง (จำเป็น), CSS กำหนดลักษณะ, JavaScript เพิ่มการโต้ตอบ เนื้อหาที่แสดงครบจึงมาจาก HTML",
+      "choiceNotes": [
+        "JavaScript ทำหน้าที่เพิ่มการโต้ตอบ ถ้าโหลดสำเร็จปุ่มควรตอบสนอง",
+        "CSS ทำหน้าที่กำหนดลักษณะ ถ้าโหลดสำเร็จหน้าเว็บต้องมีสีหรือการจัดวาง",
+        null,
+        "อาการที่เห็นคือไม่มีทั้งสไตล์และการโต้ตอบ แปลว่าทั้งสองไฟล์ไม่ทำงาน"
+      ],
+      "source": {
+        "doc": "fe",
+        "pages": [
+          12,
+          13
+        ]
+      }
+    },
+    {
+      "id": "Q04",
+      "difficulty": "easy",
+      "topic": "html",
+      "question": "ข้อใดอธิบายแท็ก <br> และ <hr> ได้ถูกต้องตามสไลด์",
+      "choices": [
+        "<br> ขึ้นบรรทัดใหม่ ส่วน <hr> ใช้ทำตัวหนาเพื่อเน้นข้อความสำคัญ",
+        "ทั้งคู่ไม่มี closing tag: <br> ขึ้นบรรทัดใหม่ <hr> ตีเส้น",
+        "<br> ต้องปิดด้วย </br> เสมอเหมือน <h1>",
+        "<hr size=\"3\" noshade> เป็นวิธีที่แนะนำในการกำหนดความหนาของเส้น"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ SPACING และ THE ANATOMY OF AN HTML TAG ระบุว่า <br> เป็น Line Break แบบ Self-closing tag และสไลด์ HORIZONTAL RULE ระบุว่า <hr> เป็น self-closing tag เช่นกัน ทำหน้าที่ตีเส้น",
+      "choiceNotes": [
+        "ตัวหนาใช้ <strong> หรือ <b> (หน้า 27) ส่วน <hr> คือ Horizontal Rule สำหรับตีเส้น",
+        null,
+        "สไลด์ระบุว่า <br> ใช้ได้โดยไม่มี Closing Tag ต่างจาก <h1> ที่มี Start Tag, Content, End Tag",
+        "size และ noshade เป็นแบบ deprecated/non-standard สไลด์แนะนำให้ใช้ CSS แทน (หน้า 16–17)"
+      ],
+      "source": {
+        "doc": "html",
+        "pages": [
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    {
+      "id": "Q05",
+      "difficulty": "easy",
+      "topic": "html",
+      "question": "ต้องการทำลิงก์จากหน้า index.html ไปหน้า contact.html ที่อยู่ในโฟลเดอร์เดียวกัน ข้อใดเขียนถูกต้อง",
+      "choices": [
+        "<a>contact.html</a>",
+        "<link href=\"contact.html\">ติดต่อได้ที่</link>",
+        "<a href=\"contact.html\">ติดต่อได้ที่</a>",
+        "<a src=\"contact.html\">ติดต่อได้ที่</a>"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ HTML LINKS AND ANCHOR TAGS กำหนดรูปแบบ <a href=\"destination\">some text</a> และตัวอย่างในสไลด์ 47 ใช้ <a href=\"contact.html\">ติดต่อได้ที่</a>",
+      "choiceNotes": [
+        "ไม่มี href จึงไม่มีปลายทาง รูปแบบที่ถูกคือ <a href=\"destination\">some text</a>",
+        "<link> ใช้ใน <head> เพื่อเชื่อมไฟล์ เช่น favicon (หน้า 9) ไม่ได้สร้างลิงก์ให้ผู้ใช้คลิก",
+        null,
+        "attribute src ใช้กับรูปภาพ เช่น <img src=...> (หน้า 29) ส่วนลิงก์ใช้ href"
+      ],
+      "source": {
+        "doc": "html",
+        "pages": [
+          45,
+          47
+        ]
+      }
+    },
+    {
+      "id": "Q06",
+      "difficulty": "easy",
+      "topic": "css",
+      "question": "ใน <body style=\"background-color:blue;\"> ส่วน background-color:blue คืออะไร",
+      "choices": [
+        "HTML element ที่ซ้อนอยู่ใน <body>",
+        "CSS selector ที่เลือก <body>",
+        "HTML attribute ของ <body>",
+        "CSS declaration (property : value)"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ Inline CSS แยกส่วนไว้ว่า style=\"...\" คือ html attribute, background-color:blue คือ css code หรือ declaration ซึ่งอยู่ในรูป property : property value",
+      "choiceNotes": [
+        "HTML element ในบรรทัดนี้คือ <body> ไม่ใช่ข้อความในเครื่องหมายคำพูด",
+        "Inline CSS ไม่ใช้ selector เพราะเขียนติดกับ element โดยตรง",
+        "attribute คือคำว่า style ส่วนค่าข้างในคือโค้ด CSS",
+        null
+      ],
+      "source": {
+        "doc": "css",
+        "pages": [
+          7
+        ]
+      }
+    },
+    {
+      "id": "Q07",
+      "difficulty": "easy",
+      "topic": "css",
+      "question": "เว็บไซต์มี 10 หน้า ต้องการเปลี่ยนสีพื้นหลังของทุกหน้าโดยแก้โค้ดเพียงที่เดียว ควรใช้วิธีใด",
+      "choices": [
+        "ใช้ attribute bgcolor ที่ <body> ของทุกหน้า",
+        "External CSS: ไฟล์ styles.css แล้ว <link> ไฟล์นี้ในทุกหน้า",
+        "Internal CSS: ใส่ <style> ใน <head> ของ index.html ซึ่งเป็นหน้าแรก",
+        "Inline CSS: ใส่ style=\"...\" ที่ <body> ของทุกหน้า"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ External CSS แยกสไตล์ไว้ในไฟล์ css/styles.css แล้วลิงก์ด้วย <link rel=\"stylesheet\" href=\"css/styles.css\"> ทำให้ทุกหน้าที่ลิงก์ไฟล์เดียวกันเปลี่ยนตามกัน",
+      "choiceNotes": [
+        "การใช้ attribute เปลี่ยนสีเป็นแบบ Deprecated และยังต้องแก้ทุกหน้า (หน้า 5)",
+        null,
+        "สไลด์ Problem of Internal CSS ระบุว่าการเปลี่ยนแปลงเกิดเฉพาะ index.html ต้อง copy style ไปทุกหน้า (หน้า 24)",
+        "สไลด์ Problem with Inline CSS ระบุว่าอยากเปลี่ยนทุกที่ต้องทำทุกที่ (หน้า 9)"
+      ],
+      "source": {
+        "doc": "css",
+        "pages": [
+          9,
+          24,
+          29
+        ]
+      }
+    },
+    {
+      "id": "Q08",
+      "difficulty": "easy",
+      "topic": "css",
+      "question": "กำหนด .box { padding: 20px; margin: 10px; } ข้อใดอธิบายตำแหน่งของพื้นที่ทั้งสองได้ถูกต้อง",
+      "choices": [
+        "ทั้งสองค่าทำให้เส้น border หนาขึ้น",
+        "padding 20px อยู่ระหว่าง content กับ border ส่วน margin 10px อยู่นอก border",
+        "padding 20px อยู่นอก border ส่วน margin 10px อยู่ระหว่าง content กับ border",
+        "ทั้ง padding และ margin อยู่นอก border"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ THE BOX MODEL: Content → Padding (clears an area around the content) → Border → Margin (clears an area outside the border) และสไลด์ 86 แสดง padding 20px กับ margin 10px",
+      "choiceNotes": [
+        "ความหนาของเส้นกำหนดด้วย border-width (สไลด์ 83) ส่วน padding และ margin เป็นพื้นที่โปร่งใส",
+        null,
+        "สลับกัน: Padding ล้างพื้นที่รอบ content ส่วน Margin ล้างพื้นที่ด้านนอก border",
+        "Padding อยู่ด้านในกรอบ ล้อมรอบ content"
+      ],
+      "source": {
+        "doc": "css",
+        "pages": [
+          78,
+          85,
+          86
+        ]
+      }
+    },
+    {
+      "id": "Q09",
+      "difficulty": "easy",
+      "topic": "bs",
+      "question": "ข้อใดตรงกับความหมายของ Responsive Web Design ตามสไลด์ Bootstrap",
+      "choices": [
+        "หน้าเดียวปรับการแสดงผลตามขนาด viewport ของอุปกรณ์",
+        "เว็บไซต์ที่ทำหน้าแยกสำหรับมือถือและคอมพิวเตอร์คนละไฟล์ แล้วสลับให้อัตโนมัติ",
+        "เว็บไซต์ที่ server ส่ง response กลับมาได้เร็วไม่ว่าจะเปิดจากอุปกรณ์ใด",
+        "เว็บไซต์ที่โต้ตอบผู้ใช้ด้วย JavaScript"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ RESPONSIVE WEB DESIGN ระบุว่า Contents are responsed to the viewport (มิติของจอ) และสไลด์ 78 อธิบายว่า Responsive Website (เช่น airbnb.com) ตอบสนองต่อขนาดของหน้าจอ",
+      "choiceNotes": [
+        null,
+        "Bootstrap ใช้ Grid และ breakpoint ให้หน้าเดียวปรับตามจอ ไม่ต้องทำหลายไฟล์",
+        "คำว่า responsive ในที่นี้หมายถึงการตอบสนองต่อขนาดหน้าจอ ไม่ใช่ความเร็วของ server",
+        "การโต้ตอบเป็นหน้าที่ของ JavaScript ไม่ใช่นิยามของ Responsive Web Design"
+      ],
+      "source": {
+        "doc": "bs",
+        "pages": [
+          6,
+          78
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "difficulty": "easy",
+      "topic": "bs",
+      "question": "ใน <div class=\"row\"> มี <div class=\"col-6\"> และ <div class=\"col-3\"> แถวนี้ยังเหลือพื้นที่ว่างกี่หน่วย",
+      "choices": [
+        "0 หน่วย เพราะ col-6 กับ col-3 เต็มแถวพอดี",
+        "3 หน่วย",
+        "9 หน่วย",
+        "6 หน่วย"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ระบุว่า GRID ถูกแบ่งเป็น 12 หน่วย และสไลด์ 85 แสดงแถวที่มี col-6 กับ col-3 ซึ่งใช้ไป 9 หน่วย จึงเหลือ 12 − 9 = 3 หน่วย",
+      "choiceNotes": [
+        "6 + 3 = 9 หน่วย ยังไม่ครบ 12",
+        null,
+        "9 คือพื้นที่ที่ใช้ไปแล้ว ไม่ใช่พื้นที่ที่เหลือ",
+        "ข้อนี้คิดเหมือนมีแค่ col-6 แต่ลืมหัก col-3"
+      ],
+      "source": {
+        "doc": "bs",
+        "pages": [
+          84,
+          85
+        ]
+      }
+    },
+    {
+      "id": "Q11",
+      "difficulty": "easy",
+      "topic": "js",
+      "question": "คำสั่ง typeof(\"123\"); ได้ผลลัพธ์เป็นอะไร",
+      "code": "typeof(\"123\");",
+      "choices": [
+        "'integer'",
+        "'string'",
+        "'number'",
+        "'boolean'"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ JS DATA TYPES แสดงว่า String เขียนในเครื่องหมายคำพูด เช่น \"Hello World\" ส่วน Numbers เช่น 12345 และ typeof(123) ได้ 'number' ดังนั้น \"123\" ที่อยู่ในเครื่องหมายคำพูดจึงเป็น 'string'",
+      "choiceNotes": [
+        "JavaScript ไม่มีชนิด integer แยก ตัวเลขทั้งหมดเป็น number",
+        null,
+        "แม้ข้างในจะเป็นตัวเลข แต่มีเครื่องหมายคำพูดครอบ จึงเป็น String (typeof(123) ที่ไม่มีคำพูดจึงจะได้ 'number')",
+        "Boolean มีค่าเพียง true หรือ false"
+      ],
+      "source": {
+        "doc": "js",
+        "pages": [
+          15
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "difficulty": "easy",
+      "topic": "js",
+      "question": "n = Math.floor(Math.random() * 6) + 1; ค่า n ที่เป็นไปได้คือข้อใด",
+      "code": "var n = Math.random();\nn = n * 6;\nn = Math.floor(n) + 1;",
+      "choices": [
+        "จำนวนเต็ม 1 ถึง 6",
+        "จำนวนเต็ม 1 ถึง 7",
+        "จำนวนเต็ม 0 ถึง 5",
+        "จำนวนเต็ม 0 ถึง 6"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ DICE RANDOM NUMBER GENERATOR: Math.random() ได้ค่า ≥ 0 และ < 1, n*6 ได้ 0 – 5.999…, Math.floor(n) ได้ 0–5 และ +1 จึงได้ 1–6",
+      "choiceNotes": [
+        null,
+        "ค่าสูงสุดก่อนบวกคือ 5 (5.999… ปัดลง) เมื่อบวก 1 จึงได้สูงสุด 6",
+        "0–5 คือค่าของ Math.floor(n*6) ก่อนบวก 1",
+        "Math.random() น้อยกว่า 1 เสมอ ผลคูณ 6 จึงไม่ถึง 6 และ +1 ทำให้ค่าต่ำสุดเป็น 1"
+      ],
+      "source": {
+        "doc": "js",
+        "pages": [
+          42,
+          43
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "difficulty": "easy",
+      "topic": "dom",
+      "question": "ทำไมสไลด์จึงแนะนำให้วาง <script src=\"index.js\"></script> ไว้บรรทัดสุดท้ายของ <body>",
+      "choices": [
+        "เพื่อให้ element ของ HTML ถูกสร้างเสร็จก่อนที่ JS จะเข้าไปแก้",
+        "เพราะ External JavaScript ใช้ใน <head> ไม่ได้เลย",
+        "เพื่อซ่อนโค้ด JavaScript ไม่ให้ผู้ใช้เห็นเมื่อกด View Page Source",
+        "เพื่อให้ JavaScript โหลดเสร็จก่อนไฟล์ CSS หน้าเว็บจึงไม่กระพริบ"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ EXTERNAL JAVASCRIPT ระบุว่าเราใช้ JavaScript เพื่อเปลี่ยนแปลงบางอย่างใน HTML จึงต้องโหลด (render) elements ของ HTML ให้เรียบร้อยก่อน และสไลด์ 76 สรุปว่าวางล่างสุดของ <body> เพราะควร render HTML ให้เสร็จก่อน",
+      "choiceNotes": [
+        null,
+        "สไลด์ไม่ได้บอกว่าใช้ไม่ได้ เหตุผลคือถ้ารันก่อน HTML จะหา element ที่ต้องการไม่เจอ (สไลด์ 14)",
+        "ตำแหน่งของ <script> ไม่เกี่ยวกับการซ่อนโค้ด",
+        "การวางท้าย <body> ทำให้ JavaScript ทำงานหลังสุด ไม่ใช่ก่อน"
+      ],
+      "source": {
+        "doc": "dom",
+        "pages": [
+          12,
+          76
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "difficulty": "easy",
+      "topic": "dom",
+      "question": "ต้องการเลือก <h1 id=\"title\"> ด้วย querySelector ข้อใดถูกต้อง",
+      "code": "<h1 id=\"title\">Hello World!</h1>",
+      "choices": [
+        "document.getElementsByClassName(\"title\")[0]",
+        "document.querySelector(\"title\")",
+        "document.querySelector(\".title\")",
+        "document.querySelector(\"#title\")"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ QUERY SELECTOR (ID, TAG, CLASS) แสดง document.querySelector(\"#title\") สำหรับ id, querySelector(\"button\") สำหรับ tag และ querySelector(\".btn\") สำหรับ class",
+      "choiceNotes": [
+        "เลือกตาม class ชื่อ title ซึ่ง <h1> นี้ไม่มี",
+        "ไม่มีเครื่องหมายนำหน้าหมายถึงเลือกตามชื่อ tag คือ <title> ไม่ใช่ id",
+        "จุด (.) ใช้เลือก class ไม่ใช่ id",
+        null
+      ],
+      "source": {
+        "doc": "dom",
+        "pages": [
+          46,
+          47
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "difficulty": "easy",
+      "topic": "node",
+      "question": "บรรทัด const express = require('express'); ทำหน้าที่อะไร",
+      "choices": [
+        "สร้างและเปิด server ของ Express ให้รอรับ request ที่ port 3000",
+        "ดาวน์โหลดและติดตั้ง express ลงใน node_modules ถ้ายังไม่มี",
+        "สร้าง route หน้าแรก \"/\"",
+        "โหลด module express มาใช้ในไฟล์ (คล้าย import)"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ Node.js - require ระบุว่าเปรียบเหมือน Include หรือ Import ในภาษาอื่น ใช้ดึง module ภายนอก/3rd party เข้ามาใช้งาน และต้องติดตั้งด้วย npm install express",
+      "choiceNotes": [
+        "การเปิด server ใช้ app.listen(3000, ...)",
+        "การติดตั้งใช้คำสั่ง npm install express ใน Terminal",
+        "การสร้าง route ใช้ app.get('/', ...)",
+        null
+      ],
+      "source": {
+        "doc": "be1",
+        "pages": [
+          18,
+          19
+        ]
+      }
+    },
+    {
+      "id": "Q16",
+      "difficulty": "easy",
+      "topic": "node",
+      "question": "ใน app.get('/', (req, res) => { ... }) handler ต้องส่งข้อมูลกลับไปให้ผู้ใช้อย่างไร",
+      "choices": [
+        "ใช้ console.log() แสดงข้อมูล",
+        "ใช้ req.send() เพราะ req คือ object ที่เชื่อมกับ browser ที่ส่งมา",
+        "ตอบผ่าน res เช่น res.send()",
+        "ใช้ return ส่งค่าออกจากฟังก์ชัน แล้ว Express จะส่งค่านั้นให้ browser"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ Express.js - Response ระบุว่า handler function รับ request และ response ตามลำดับ และเมื่อทำงานเสร็จจะต้องตอบกลับผ่าน response object เสมอ เช่น .send() หรือ .json()",
+      "choiceNotes": [
+        "console.log แสดงผลใน Terminal ฝั่ง server ไม่ได้ส่งไปที่ browser",
+        "req คือ request ที่รับเข้ามา การตอบกลับต้องใช้ res",
+        null,
+        "Express ไม่ได้ส่งค่าที่ return กลับไปให้ browser ต้องตอบผ่าน res"
+      ],
+      "source": {
+        "doc": "be1",
+        "pages": [
+          67,
+          71
+        ]
+      }
+    },
+    {
+      "id": "Q17",
+      "difficulty": "easy",
+      "topic": "bp",
+      "question": "index.html มี <form action=\"/\" method=\"post\"> แต่ calculator.js มีเพียง app.get(\"/\") เมื่อกด Calculate จะเกิดอะไรขึ้น",
+      "choices": [
+        "ได้ Cannot POST / (404) เพราะไม่มี handler ของ POST",
+        "server จะเรียก app.get(\"/\") แทนโดยอัตโนมัติเพราะเป็น path เดียวกัน",
+        "ได้ 500 Internal Server Error เพราะ server ประมวลผล form ไม่ได้",
+        "ได้ 200 OK และผลบวกของตัวเลข"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ Payload และ 404 Not Found อธิบายว่าเมื่อ POST แล้วขึ้น Cannot POST / เพราะยังไม่ได้ handle POST request และ Status Code เป็น 404 Not Found จนกว่าจะสร้าง app.post(\"/\") (สไลด์ 34)",
+      "choiceNotes": [
+        null,
+        "GET กับ POST เป็นคนละ route ต้องสร้าง app.post(\"/\") แยก",
+        "500 คือ server ทำงานผิดพลาด แต่กรณีนี้ server หา handler ที่ตรงกับ request ไม่เจอ จึงเป็น 404",
+        "ยังไม่มีโค้ดรับ POST และยังไม่ได้คำนวณ จึงไม่มีผลบวก"
+      ],
+      "source": {
+        "doc": "be2",
+        "pages": [
+          30,
+          31,
+          33,
+          34
+        ]
+      }
+    },
+    {
+      "id": "Q18",
+      "difficulty": "easy",
+      "topic": "api",
+      "question": "ต้องการแก้ไขข้อมูลสินค้าที่มีอยู่แล้วผ่าน REST API ควรใช้ HTTP Method ใด",
+      "choices": [
+        "GET",
+        "DELETE",
+        "PUT",
+        "POST"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ REST APIs ระบุ HTTP Methods ไว้ว่า GET ดึงข้อมูล, POST เพิ่มข้อมูล, PUT อัปเดตข้อมูล และ DELETE ลบข้อมูล",
+      "choiceNotes": [
+        "GET ใช้ดึงข้อมูล (Retrieve)",
+        "DELETE ใช้ลบข้อมูล",
+        null,
+        "POST ใช้เพิ่มข้อมูลใหม่ (Create)"
+      ],
+      "source": {
+        "doc": "be3",
+        "pages": [
+          38
+        ]
+      }
+    },
+    {
+      "id": "Q19",
+      "difficulty": "easy",
+      "topic": "db",
+      "question": "API ตอบกลับด้วย 500 Internal Server Error ข้อใดตีความได้ถูกต้อง",
+      "choices": [
+        "คำขอสำเร็จแล้ว (กลุ่ม 2xx)",
+        "เป็นข้อผิดพลาดจากฝั่ง Client (กลุ่ม 4xx)",
+        "ต้อง Redirect ไปที่อื่น (กลุ่ม 3xx)",
+        "เป็นข้อผิดพลาดฝั่ง Server (กลุ่ม 5xx)"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ HTTP Status Code แบ่ง 2xx Successful, 3xx Redirection, 4xx Client Error, 5xx Server Error และสไลด์ 24 ใช้ res.status(500) สำหรับหน้า error",
+      "choiceNotes": [
+        "Successful คือ 2xx เช่น 200, 201",
+        "Client Error คือรหัส 4xx เช่น 400, 404",
+        "Redirection คือ 3xx เช่น 301, 302",
+        null
+      ],
+      "source": {
+        "doc": "be4",
+        "pages": [
+          19,
+          24
+        ]
+      }
+    },
+    {
+      "id": "Q20",
+      "difficulty": "easy",
+      "topic": "mongo",
+      "question": "ข้อใดตรงกับลักษณะของ MongoDB ตามสไลด์",
+      "choices": [
+        "เก็บข้อมูลทั้งหมดไว้ในไฟล์ .env บนเครื่องที่รัน Node.js",
+        "NoSQL แบบ Document-Oriented ปรับโครงสร้างได้ง่าย",
+        "ต้องสร้างตารางและ column ด้วย CREATE TABLE ก่อนเก็บข้อมูล",
+        "ใช้งานผ่าน XAMPP และ phpMyAdmin ในเครื่องเท่านั้น"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ MongoDB ระบุว่าเป็นฐานข้อมูลประเภท NoSQL เก็บข้อมูลในรูปแบบเอกสาร (Document-Oriented Database) มีความยืดหยุ่นและง่ายต่อการปรับเปลี่ยนโครงสร้าง",
+      "choiceNotes": [
+        ".env ใช้เก็บข้อมูลลับ เช่น username/password ของฐานข้อมูล (หน้า 15)",
+        null,
+        "CREATE TABLE เป็นคำสั่ง SQL ของ MySQL ในบท BE4",
+        "XAMPP/phpMyAdmin ใช้กับ MySQL ส่วน MongoDB สมัครใช้งานออนไลน์ได้ฟรี (หน้า 4)"
+      ],
+      "source": {
+        "doc": "be7",
+        "pages": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "Q21",
+      "difficulty": "medium",
+      "topic": "fe",
+      "question": "ตามหน้าที่ของ Web Browser 5 ขั้น ข้อใดระบุขั้นที่เกิด \"ก่อน\" Direct Request และขั้นที่เกิด \"หลัง\" รับข้อมูล (Data) ได้ถูกต้อง",
+      "choices": [
+        "ก่อน: รับข้อมูล (Data) / หลัง: หา IP Address (Lookup)",
+        "ก่อน: แสดงผล (Render) / หลัง: Direct Request",
+        "ก่อน: หา IP Address (Lookup) / หลัง: แสดงผลในรูปแบบ Website (Render)",
+        "ก่อน: หา IP Address (Lookup) / หลัง: Direct Request อีกครั้ง"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ HOW DO WEBSITES WORK? เรียงไว้ว่า 1) ต้องการเข้า Google.com 2) หา IP Address (Lookup) 3) Direct Request ผ่าน IP Address 4) รับข้อมูล (Data) 5) แสดงผลในรูปแบบ Website (Render)",
+      "choiceNotes": [
+        "ต้องรู้ IP ก่อนจึงจะส่ง Request และรับข้อมูลได้ ลำดับนี้กลับด้าน",
+        "Render เป็นขั้นสุดท้าย เกิดหลังได้รับข้อมูลแล้ว",
+        null,
+        "หลังรับข้อมูลแล้วขั้นต่อไปคือ Render ไม่ใช่ส่ง Request ซ้ำ"
+      ],
+      "source": {
+        "doc": "fe",
+        "pages": [
+          9
+        ]
+      }
+    },
+    {
+      "id": "Q22",
+      "difficulty": "medium",
+      "topic": "html",
+      "question": "ข้อใดอธิบายความต่างระหว่าง <em> กับ <i> ได้ถูกต้อง",
+      "choices": [
+        "<i> เน้นความหมาย ส่วน <em> ทำตัวเอียงเพื่อความสวยงามอย่างเดียว",
+        "<em> กับ <i> ให้ผลเหมือนกันทุกประการ ทั้งการแสดงผลและการอ่านออกเสียง",
+        "<em> ทำตัวหนาเพื่อเน้นความหมาย ส่วน <i> ทำตัวเอียงเพื่อการแสดงผล",
+        "<em> เน้นความหมาย (text to speech จะเน้นเสียง) ส่วน <i> แค่ตัวเอียง"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ การทำตัวเอียง ระบุว่า <i> ใช้ทำตัวเอียงทางสายตา (presentation) ส่วน <em> เน้นความหมาย (semantics) และสไลด์ Semantic Markup ระบุว่า screen reader จะอ่าน <em> ด้วยการเน้นเสียง",
+      "choiceNotes": [
+        "สลับกัน: <i> เป็นเชิง presentation ส่วน <em> เป็นเชิง semantics",
+        "สไลด์ระบุว่า text to speech จะ stress เสียงที่ <em> แต่ไม่ทำกับ <i>",
+        "ตัวหนาคือ <strong>/<b> (หน้า 27) ส่วน <em> แสดงผลเป็นตัวเอียงและเน้นความหมาย",
+        null
+      ],
+      "source": {
+        "doc": "html",
+        "pages": [
+          26,
+          28
+        ]
+      }
+    },
+    {
+      "id": "Q23",
+      "difficulty": "medium",
+      "topic": "html",
+      "question": "รูปภาพลายเส้นตกแต่งพื้นหลังไม่มีความหมายต่อเนื้อหา สไลด์แนะนำให้กำหนด alt อย่างไร",
+      "choices": [
+        "ไม่ต้องใส่ attribute alt",
+        "ใส่ alt=\"\" เพื่อให้ screen reader ข้ามไป",
+        "ใส่คำอธิบายยาว ๆ เพื่อช่วย SEO",
+        "ใส่ชื่อไฟล์ เช่น alt=\"line-bg.png\""
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ Alternative Text ข้อ 4 ระบุว่าควรใส่ alt เสมอ และถ้าภาพเป็น purely decorative อาจใส่ alt=\"\" เพื่อให้ screen reader ข้ามไป",
+      "choiceNotes": [
+        "HTML และ WCAG แนะนำให้ใส่ alt เสมอ",
+        null,
+        "ภาพที่เป็นการตกแต่งล้วน ๆ ไม่ควรให้ screen reader อ่าน สไลด์แนะนำ alt=\"\"",
+        "screen reader จะอ่านชื่อไฟล์ซึ่งไม่มีความหมายต่อผู้ใช้"
+      ],
+      "source": {
+        "doc": "html",
+        "pages": [
+          30
+        ]
+      }
+    },
+    {
+      "id": "Q24",
+      "difficulty": "medium",
+      "topic": "css",
+      "question": "จากโค้ดด้านล่าง ข้อความใน <h1 class=\"title\"> จะเป็นสีอะไร",
+      "code": ".title { color: green; }\nh1 { color: red; }",
+      "choices": [
+        "สีแดง เพราะ tag selector สำคัญกว่า class selector",
+        "สีแดง เพราะกฎ h1 เขียนไว้ทีหลังจึงทับกฎก่อนหน้าเสมอ",
+        "สีเขียว เพราะ class (0,1,0) ชนะ tag (0,0,1)",
+        "สีดำ เพราะกฎสองข้อขัดกันเบราว์เซอร์จึงใช้ค่าเริ่มต้น"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ Specificity ลำดับความสำคัญ ระบุ tag selector = (0,0,1) < class selector = (0,1,0) และสไลด์ 50 แสดงว่า selector ที่ More Specific จะ override selector ที่ More General",
+      "choiceNotes": [
+        "สไลด์ Specificity ระบุว่า tag (0,0,1) < class (0,1,0)",
+        "ลำดับการเขียนใช้ตัดสินเมื่อ specificity เท่ากัน แต่ class สูงกว่า tag",
+        null,
+        "CSS ไม่ยกเลิกกฎที่ขัดกัน แต่เลือกกฎที่ specific กว่า"
+      ],
+      "note": "เหตุผลที่ว่าลำดับการเขียนมีผลเฉพาะเมื่อ specificity เท่ากัน เป็นความรู้เสริมที่สไลด์ไม่ได้เขียนไว้ตรง ๆ",
+      "source": {
+        "doc": "css",
+        "pages": [
+          48,
+          50
+        ]
+      }
+    },
+    {
+      "id": "Q25",
+      "difficulty": "medium",
+      "topic": "css",
+      "question": "เขียน span { width: 100px; } แล้วความกว้างของ <span> ไม่เปลี่ยน ถ้าต้องการกำหนดขนาดโดยยังอยู่ในบรรทัดเดียวกับข้อความอื่น ควรใช้ค่า display ใด",
+      "choices": [
+        "display: none;",
+        "display: block;",
+        "display: inline;",
+        "display: inline-block;"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ CSS DISPLAY PROPERTY: Block ใช้พื้นที่ทั้งบรรทัด เปลี่ยนขนาดได้, Inline (<a>, <img>, <span>) ใช้เนื้อที่เท่าที่จำเป็น เปลี่ยนขนาดไม่ได้, Inline-Block กำหนดขนาดได้, None ทำให้ element หายไป",
+      "choiceNotes": [
+        "none ทำให้ element หายไปจากหน้า",
+        "block เปลี่ยนขนาดได้ แต่ใช้พื้นที่ทั้งบรรทัดและขึ้นบรรทัดใหม่",
+        "<span> เป็น inline อยู่แล้ว และ inline เปลี่ยนขนาดไม่ได้",
+        null
+      ],
+      "source": {
+        "doc": "css",
+        "pages": [
+          91,
+          96
+        ]
+      }
+    },
+    {
+      "id": "Q26",
+      "difficulty": "medium",
+      "topic": "bs",
+      "question": "ใช้ Bootstrap แล้วเขียน h1 { font-size: ... } ใน styles.css แต่ขนาดไม่เปลี่ยน วิธีใดแก้ได้ตามสไลด์",
+      "choices": [
+        "ลบ <meta charset=\"utf-8\"> ออก",
+        "ย้าย <link> ของ Bootstrap ไปไว้ใน <script> เพื่อให้โหลดทีหลังสุด",
+        "ย้าย <link> ของ styles.css ไปไว้ก่อน <link> ของ Bootstrap",
+        "ให้ styles.css โหลดหลัง Bootstrap"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ CSS AND BOOTSTRAP ระบุว่า h1 กำหนดไว้ใน bootstrap.css แก้ได้ด้วย !important หรือสลับตำแหน่ง link ให้ CSS ของเราโหลดทีหลัง และสไลด์ 27 ย้ำว่าเอา styles.css ไว้หลังเสมอ",
+      "choiceNotes": [
+        "charset เกี่ยวกับการเข้ารหัสตัวอักษร ไม่เกี่ยวกับลำดับสไตล์",
+        "<script> ใช้กับไฟล์ JavaScript ไม่ใช้กับไฟล์ CSS",
+        "เป็นลำดับที่ทำให้ bootstrap.css โหลดทีหลังและทับสไตล์ของเรา",
+        null
+      ],
+      "source": {
+        "doc": "bs",
+        "pages": [
+          23,
+          25,
+          27
+        ]
+      }
+    },
+    {
+      "id": "Q27",
+      "difficulty": "medium",
+      "topic": "bs",
+      "question": "ใน Navbar ต้องการดัน <ul class=\"navbar-nav\"> ไปชิดขวา ควรเพิ่ม class ใด และมีความหมายอย่างไร",
+      "choices": [
+        "navbar-expand-lg: ขยายเมนูให้เต็มแถวแล้วชิดขวาบนจอ lg",
+        "navbar-toggler: ย้ายเมนูไปรวมไว้ทางด้านขวาของ Navbar",
+        "me-auto: margin ที่ end แบบ auto ดันเมนูไปขวา",
+        "ms-auto: margin ด้าน start แบบ auto"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ NAVBAR ใช้ Bootstrap Spacing โดยใส่ ms-auto ที่ <ul> คือ m = เพิ่ม Margin, s = ตำแหน่งเริ่มต้น แบบอัตโนมัติจนเต็ม ทำให้ลิงก์เลื่อนไปทางขวา",
+      "choiceNotes": [
+        "navbar-expand-lg ใช้ทำให้เมนูเรียงแนวนอนเมื่อจอขนาด lg (สไลด์ 54) ไม่ได้ดันไปขวา",
+        "navbar-toggler คือปุ่ม Hamburger สำหรับย่อเมนู (สไลด์ 68–70)",
+        "margin ด้าน end จะเติมที่ว่างทางขวาของเมนู ทำให้เมนูชิดซ้าย (ตัวอย่างสไลด์ 20 ใช้ me-auto และเมนูอยู่ซ้าย)",
+        null
+      ],
+      "note": "ความหมายของ me-auto (margin ด้าน end) อนุมานจากรูปแบบ m + s ในสไลด์ และตัวอย่าง Navbar ในสไลด์ 20",
+      "source": {
+        "doc": "bs",
+        "pages": [
+          64,
+          65,
+          66
+        ]
+      }
+    },
+    {
+      "id": "Q28",
+      "difficulty": "medium",
+      "topic": "js",
+      "question": "จากโค้ดด้านล่าง ผลของ a == b และ a === b คืออะไรตามลำดับ",
+      "code": "var a = 10;\nvar b = \"10\";\n\na == b;   // ?\na === b;  // ?",
+      "choices": [
+        "true และ true",
+        "false และ false",
+        "false และ true",
+        "true และ false"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ == VS === สรุปว่าทั้ง == และ === ตรวจสอบความเท่ากัน แต่ === ตรวจสอบ typeof ด้วย",
+      "choiceNotes": [
+        "=== ตรวจชนิดข้อมูลด้วย 10 (number) กับ \"10\" (string) ต่างชนิดกัน",
+        "== ตรวจเฉพาะค่า 10 กับ \"10\" มีค่าเท่ากัน จึงได้ true",
+        "=== เข้มงวดกว่า == ถ้า === เป็น true แล้ว == ก็ต้อง true ด้วย",
+        null
+      ],
+      "source": {
+        "doc": "js",
+        "pages": [
+          50
+        ]
+      }
+    },
+    {
+      "id": "Q29",
+      "difficulty": "medium",
+      "topic": "js",
+      "question": "ผู้ใช้กรอกชื่อ \"cHaNakarn\" ในโค้ดด้านล่าง alert จะแสดงข้อความใด",
+      "code": "var name = prompt(\"What is your name ?\");\nname = name.toLowerCase();\nalert(\"Hello, \" + name.slice(0,1).toUpperCase() + name.slice(1, name.length));",
+      "choices": [
+        "Hello, hanakarn",
+        "Hello, CHANAKARN",
+        "Hello, cHaNakarn",
+        "Hello, Chanakarn"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ [PA 5.2] ให้ผลลัพธ์ Hello, Chanakarn ไม่ว่าผู้ใช้จะพิมพ์ chanakarn, cHaNakarn หรือ CHANAKARN โดยแปลงเป็นตัวเล็กทั้งหมดก่อน แล้วทำตัวแรกเป็นตัวใหญ่และต่อด้วยส่วนที่เหลือ (slice ในสไลด์ 29)",
+      "choiceNotes": [
+        "slice(1, name.length) ตัดตัวแรกออก แต่ตัวแรกถูกนำมาต่อด้านหน้าด้วย slice(0,1).toUpperCase()",
+        "toUpperCase() ใช้กับตัวอักษรแรกเท่านั้น (slice(0,1))",
+        "โค้ดเรียก toLowerCase() และ toUpperCase() จึงไม่คงตัวพิมพ์เดิม",
+        null
+      ],
+      "source": {
+        "doc": "js",
+        "pages": [
+          29,
+          31,
+          32
+        ]
+      }
+    },
+    {
+      "id": "Q30",
+      "difficulty": "medium",
+      "topic": "dom",
+      "question": "เดิมปุ่มยังไม่มี class invisible ถ้าเรียกคำสั่งด้านล่าง 3 ครั้งติดกัน ผลสุดท้ายคืออะไร",
+      "code": "document.querySelector(\"button\").classList.toggle(\"invisible\");",
+      "choices": [
+        "ปุ่มมี class invisible ซ้อนกัน 3 ชั้น",
+        "ปุ่มไม่มี class invisible",
+        "ปุ่มมี class invisible (ถูกซ่อน)",
+        "เกิด error เพราะเรียก toggle ซ้ำไม่ได้"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ CHANGING STYLE อธิบาย Toggle ว่าเมื่อยังไม่มีการใช้ class invisible ให้ใช้งาน ถ้ามีอยู่แล้วให้หยุดใช้งาน ครั้งที่ 1 เพิ่ม ครั้งที่ 2 เอาออก ครั้งที่ 3 เพิ่ม",
+      "choiceNotes": [
+        "classList เก็บชื่อ class ไม่ซ้ำ toggle จะสลับเพิ่ม/เอาออก ไม่ได้เพิ่มซ้ำ",
+        "เป็นผลหลังเรียก 2 ครั้ง (เพิ่ม → เอาออก) ครั้งที่ 3 จะเพิ่มกลับมา",
+        null,
+        "toggle เรียกซ้ำได้ ทุกครั้งจะสลับสถานะ"
+      ],
+      "source": {
+        "doc": "dom",
+        "pages": [
+          61,
+          62,
+          63,
+          64
+        ]
+      }
+    },
+    {
+      "id": "Q31",
+      "difficulty": "medium",
+      "topic": "dom",
+      "question": "จาก HTML ด้านล่าง ผลของ innerHTML และ textContent ของ h1 คือข้อใด",
+      "code": "<h1 id=\"title\"><em>Hello World!</em></h1>",
+      "choices": [
+        "ทั้งคู่ได้ '<h1 id=\"title\"><em>Hello World!</em></h1>'",
+        "ทั้งคู่ได้ 'Hello World!'",
+        "innerHTML = '<em>Hello World!</em>' และ textContent = 'Hello World!'",
+        "innerHTML = 'Hello World!' และ textContent = '<em>Hello World!</em>'"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ TEXT MANIPULATION แสดงว่า innerHTML ได้ '<em>Hello World!</em>' (ทุกอย่างที่อยู่ใน HTML tag) และ textContent ได้ 'Hello World!' (เลือกเฉพาะ content)",
+      "choiceNotes": [
+        "ทั้งสองคำสั่งไม่รวมแท็ก <h1> ของตัวเอง",
+        "innerHTML จะรวมแท็ก <em> ที่อยู่ข้างในด้วย",
+        null,
+        "สลับกัน: innerHTML ได้ทุกอย่างใน tag รวมแท็กลูก ส่วน textContent ได้เฉพาะข้อความ"
+      ],
+      "source": {
+        "doc": "dom",
+        "pages": [
+          67,
+          68
+        ]
+      }
+    },
+    {
+      "id": "Q32",
+      "difficulty": "medium",
+      "topic": "node",
+      "question": "เพื่อนส่งโปรเจกต์ Express มาโดยไม่มีโฟลเดอร์ node_modules มีแค่ package.json ทำไมรัน npm install แล้วจึงใช้งานได้",
+      "choices": [
+        "เพราะ npm install จะสร้าง package.json ใหม่ที่ตรงกับเครื่องเราทุกครั้ง",
+        "เพราะ Express ติดตั้งมากับ Node.js อยู่แล้ว",
+        "เพราะ package.json ระบุ dependencies ไว้ให้ npm ดาวน์โหลด",
+        "เพราะ package.json เก็บโค้ดของทุกแพ็กเกจไว้ข้างใน"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ Package Manager ระบุว่าช่วยจัดการ dependency และไม่กินพื้นที่เมื่อแชร์งาน เพราะโปรเจกต์ระบุแค่ชื่อ dependency และเวอร์ชัน (เช่น \"express\": \"^4.18.1\" ในสไลด์ 50) และ npm install ใช้ดาวน์โหลด package",
+      "choiceNotes": [
+        "การสร้าง package.json ใช้ npm init",
+        "Express เป็น module บน npm ต้องติดตั้งเพิ่มด้วย npm install express (หน้า 54–55)",
+        null,
+        "package.json เก็บแค่รายชื่อและเวอร์ชัน จึงไม่กินพื้นที่เมื่อแชร์งาน"
+      ],
+      "source": {
+        "doc": "be1",
+        "pages": [
+          48,
+          49,
+          50
+        ]
+      }
+    },
+    {
+      "id": "Q33",
+      "difficulty": "medium",
+      "topic": "node",
+      "question": "งานใดเหมาะกับ Node.js \"น้อยที่สุด\" ตามสไลด์",
+      "choices": [
+        "ระบบแชตแบบ Real-time ผ่าน Socket",
+        "API ที่รับ Request จำนวนมากแล้วรอข้อมูลจาก Database",
+        "งาน CPU Intensive เช่น Machine Learning",
+        "บริการอ่าน/เขียนไฟล์ (File I/O) จำนวนมากพร้อมกัน"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ Node.js มีข้อดีอย่างไร ระบุว่าเหมาะกับงานที่ต้องรอ เช่น Network/HTTP, API, File I/O, Database, Socket ส่วนงานที่ไม่ควรใช้คือ CPU Intensive, Rendering, Machine Learning, Algorithm และขุด Crypto Currency",
+      "choiceNotes": [
+        "Socket อยู่ในรายการงานที่ Node.js เหมาะ และ Express ใช้ทำ Real-time messaging ได้ (หน้า 53)",
+        "เป็นงานที่ต้องรอ (Database, HTTP) ซึ่งเป็นจุดแข็งของ Node.js",
+        null,
+        "File I/O เป็นงานที่ต้องรอ ซึ่ง Node.js รองรับแบบ asynchronous"
+      ],
+      "source": {
+        "doc": "be1",
+        "pages": [
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "id": "Q34",
+      "difficulty": "medium",
+      "topic": "bp",
+      "question": "ต้องการให้ route \"/\" ส่งไฟล์ index.html กลับไปให้เบราว์เซอร์ โค้ดใดถูกต้องและเพราะอะไร",
+      "choices": [
+        "res.sendFile(__dirname + \"/index.html\")",
+        "res.send(\"index.html\") เพราะ send ส่งไฟล์ได้ทุกชนิด",
+        "res.sendFile(\"index.html\") เพราะไฟล์อยู่โฟลเดอร์เดียวกัน",
+        "res.json(\"index.html\") เพราะ HTML เป็น JSON ชนิดหนึ่ง"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ res.send และ res.sendFile ระบุว่า res.send ส่งได้แค่ HTML data แต่ส่งทั้งไฟล์ไม่ได้ ต้องใช้ res.sendFile และใช้ __dirname เป็น path ไปยังไฟล์ใน server",
+      "choiceNotes": [
+        null,
+        "res.send(\"index.html\") ส่งข้อความ \"index.html\" กลับไป ไม่ใช่ไฟล์",
+        "relative path ทำให้เกิด error เพราะเราไม่รู้ path จริงบน server (หน้า 23–24)",
+        "res.json ใช้ตอบกลับข้อมูล JSON ไม่ได้ส่งไฟล์ HTML"
+      ],
+      "source": {
+        "doc": "be2",
+        "pages": [
+          21,
+          22,
+          24,
+          25
+        ]
+      }
+    },
+    {
+      "id": "Q35",
+      "difficulty": "medium",
+      "topic": "bp",
+      "question": "จากโค้ดด้านล่าง ถ้าไม่มีไฟล์ example.txt อยู่จริง จะเกิดอะไรขึ้น",
+      "code": "fs.readFile('example.txt', 'utf8')\n  .then((data) => {\n    console.log('เนื้อหาไฟล์:', data);\n    return fs.writeFile('newFile.txt', data + '\\nข้อมูลเพิ่มเติม');\n  })\n  .then(() => console.log('เขียนไฟล์เสร็จสมบูรณ์!'))\n  .catch((err) => console.error('เกิดข้อผิดพลาด:', err.message));",
+      "choices": [
+        "แสดง 'เขียนไฟล์เสร็จสมบูรณ์!' ก่อนแล้วจึงแสดง error",
+        "ทำ .then() ตัวแรกด้วย data เป็นค่าว่าง แล้วเขียน newFile.txt",
+        "Rejected ข้าม .then() ทั้งหมดไปที่ .catch()",
+        "Promise ค้างอยู่ในสถานะ Pending ตลอดไป"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ Promise ระบุสถานะ Pending / Fulfilled / Rejected ใช้ .then() เมื่อสำเร็จ และ .catch() เมื่อเกิดข้อผิดพลาด สไลด์ 10 แสดงการต่อ .then().then().catch() แบบ Chainable",
+      "choiceNotes": [
+        "ข้อความนั้นอยู่ใน .then() ตัวที่สองซึ่งจะไม่ถูกเรียกเมื่อ Promise ล้มเหลว",
+        ".then() ทำงานเมื่องานสำเร็จ (Fulfilled) แต่กรณีนี้อ่านไฟล์ไม่สำเร็จ",
+        null,
+        "Pending คือสถานะระหว่างทำงาน เมื่ออ่านไฟล์ล้มเหลวจะเปลี่ยนเป็น Rejected"
+      ],
+      "note": "ลำดับที่ .catch() รับ error จาก .then() ด้านบนทั้งหมด อนุมานจากหลัก Chainable ในสไลด์",
+      "source": {
+        "doc": "be2",
+        "pages": [
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "id": "Q36",
+      "difficulty": "medium",
+      "topic": "api",
+      "question": "แยกส่วนประกอบของ Request ด้านล่างได้ถูกต้องตามข้อใด",
+      "code": "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=1e93...",
+      "choices": [
+        "Endpoint = appid, Query Parameters = weather",
+        "Base URL = https://api.openweathermap.org, Endpoint = data/2.5/weather?lat=44.34, Query Parameters = appid",
+        "Base URL = ทั้ง URL, ไม่มี Endpoint และ Query Parameters",
+        "Base URL = https://api.openweathermap.org/data/2.5/, Endpoint = weather, Query Parameters = lat, lon, appid"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ ส่วนประกอบของ REST APIs Request แบ่ง URL เป็น Base URL, Endpoint และ Query Parameters โดย appid ใช้เพื่อ Authentication and Authorization",
+      "choiceNotes": [
+        "weather คือ endpoint ส่วน appid เป็น query parameter สำหรับ Authentication",
+        "Query Parameters เริ่มหลังเครื่องหมาย ? และครอบคลุม lat, lon, appid ทั้งหมด",
+        "สไลด์แยก URL นี้เป็น 3 ส่วนชัดเจน",
+        null
+      ],
+      "source": {
+        "doc": "be3",
+        "pages": [
+          44,
+          55
+        ]
+      }
+    },
+    {
+      "id": "Q37",
+      "difficulty": "medium",
+      "topic": "api",
+      "question": "หน้า bmiCalculator.html โหลดได้ แต่ styles.css ไม่ทำงาน ตามสไลด์ควรแก้อย่างไร",
+      "choices": [
+        "เปลี่ยน <link> ให้ใช้ absolute path ของเครื่องเรา เช่น C:/project/styles.css",
+        "ย้าย CSS ทั้งหมดไปใส่ใน res.send()",
+        "ย้าย styles.css ไปไว้ในโฟลเดอร์ public และเพิ่ม app.use(express.static('public'));",
+        "ติดตั้ง body-parser แล้วใช้ bodyParser.urlencoded()"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ Problem: ไฟล์ css ไม่สามารถใช้ได้ ระบุว่า styles.css เป็นไฟล์ static ต้องย้ายไปโฟลเดอร์ public และใส่ app.use(express.static('public')) หากไม่ใช้จะต้องเขียน route handler ให้ทุกไฟล์ (หน้า 8–9)",
+      "choiceNotes": [
+        "สไลด์ระบุว่าไฟล์ static บน server link ด้วย absolute path ปกติไม่ได้",
+        "ทำให้โค้ดซับซ้อนและยังไม่ใช่วิธีให้บริการไฟล์ static ตามสไลด์",
+        null,
+        "body-parser ใช้อ่านข้อมูลจากฟอร์มใน req.body ไม่เกี่ยวกับไฟล์ CSS"
+      ],
+      "source": {
+        "doc": "be3",
+        "pages": [
+          7,
+          8,
+          9
+        ]
+      }
+    },
+    {
+      "id": "Q38",
+      "difficulty": "medium",
+      "topic": "db",
+      "question": "ใน API เวิร์กช็อป #4.1 คำขอ 3 รายการต่อไปนี้ได้ Status Code อะไรตามลำดับ: (1) POST /items สำเร็จ (2) DELETE /items/1 สำเร็จ (3) GET /items/7 ที่ไม่มีอยู่",
+      "choices": [
+        "201 Created, 204 No Content, 404 Not Found",
+        "201 Created, 404 Not Found, 500 Internal Server Error",
+        "200 OK, 200 OK, 404 Not Found",
+        "202 Accepted, 204 No Content, 400 Bad Request"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ Step #4 POST /items ได้ 201 Created, Step #9.1 DELETE /items/1 ได้ 204 No Content และ Step #5.2 GET id ที่ไม่มีได้ 404 Not Found พร้อม { \"error\": \"Item not found\" }",
+      "choiceNotes": [
+        null,
+        "การลบ id ที่มีอยู่จริงสำเร็จ จึงได้ 204 และ id ที่ไม่มีคือความผิดฝั่ง client ได้ 404",
+        "เวิร์กช็อปใช้ 201 สำหรับการสร้างข้อมูล และ 204 สำหรับการลบที่ไม่มีเนื้อหาตอบกลับ",
+        "202 คือรับคำขอแล้วแต่ยังประมวลผลไม่เสร็จ และ API นี้ตอบ id ที่ไม่มีด้วย 404"
+      ],
+      "source": {
+        "doc": "be4",
+        "pages": [
+          30,
+          33,
+          37
+        ]
+      }
+    },
+    {
+      "id": "Q39",
+      "difficulty": "medium",
+      "topic": "db",
+      "question": "ตาราง users มี username varchar(40) primary key และมี 'admin' อยู่แล้ว คำสั่ง INSERT ใดจะ error",
+      "choices": [
+        "เฉพาะ (null) เพราะ PRIMARY KEY ห้ามว่างอย่างเดียว",
+        "ไม่มีคำสั่งใด error",
+        "เฉพาะ ('admin') เพราะ PRIMARY KEY ห้ามซ้ำอย่างเดียว",
+        "ทั้ง ('admin') และ (null)"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ประเภทของ Constraints ระบุว่า PRIMARY KEY คือ NOTNULL + UNIQUE และสไลด์ SQL: PRIMARY KEY แสดงว่า insert 'admin' ซ้ำได้ ERROR 1062 Duplicate entry และ insert null ได้ ERROR 1048 cannot be null",
+      "choiceNotes": [
+        "PRIMARY KEY ห้ามซ้ำด้วย ('admin') จึงได้ Duplicate entry",
+        "สไลด์แสดง ERROR 1062 Duplicate entry และ ERROR 1048 cannot be null",
+        "PRIMARY KEY = NOT NULL + UNIQUE จึงห้ามเป็น null ด้วย",
+        null
+      ],
+      "source": {
+        "doc": "be4",
+        "pages": [
+          122,
+          141
+        ]
+      }
+    },
+    {
+      "id": "Q40",
+      "difficulty": "medium",
+      "topic": "mongo",
+      "question": "ทำไมสไลด์จึงให้เก็บ username/password ของฐานข้อมูลไว้ในไฟล์ .env และเพิ่ม .env ลงใน .gitignore",
+      "choices": [
+        "เพื่อให้ MongoDB อ่านค่าการเชื่อมต่อได้เร็วขึ้นโดยไม่ต้อง parse โค้ด",
+        "เพื่อให้ .env ถูก commit ขึ้น GitHub โดยอัตโนมัติ",
+        "เพราะ Node.js อ่านรหัสผ่านจากไฟล์ .js ไม่ได้",
+        "แยกข้อมูลลับออกจากโค้ดและไม่ให้ Git อัปโหลด .env"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ dotenv ระบุว่าการ hardcode username/password ในโค้ดเสี่ยงต่อการรั่วไหลเมื่อ push ไป GitHub การใช้ .env แยกข้อมูลสำคัญออกจากโค้ด และเมื่อเพิ่ม .env ใน .gitignore ไฟล์จะไม่ถูก track (สไลด์ 27 ยืนยันว่าไม่มี .env และ node_modules ใน repo)",
+      "choiceNotes": [
+        "dotenv ใช้เพื่อความปลอดภัยของข้อมูลลับ ไม่ได้เพิ่มความเร็ว",
+        ".gitignore ทำงานตรงข้าม คือให้ Git เพิกเฉยไฟล์ที่ระบุ",
+        "Node.js อ่านได้ แต่การ hardcode รหัสในโค้ดเสี่ยงรั่วไหลเมื่อ push ขึ้น GitHub",
+        null
+      ],
+      "source": {
+        "doc": "be7",
+        "pages": [
+          15,
+          21,
+          27
+        ]
+      }
+    },
+    {
+      "id": "Q41",
+      "difficulty": "hard",
+      "topic": "fe",
+      "question": "ข้อใดเรียงลำดับเส้นทางเมื่อ Client ต้องการดู google.com ได้ถูกต้องตามสไลด์",
+      "choices": [
+        "Client → ISP → Internet Backbone → Google ส่ง Data กลับ → DNS Server หา IP → Web Browser แสดงผล",
+        "Client → Internet Backbone → ISP → DNS Server หา IP → Web Browser แสดงผล → Google ส่ง Data กลับ",
+        "Client → DNS Server → Internet Backbone → Google ส่ง Data กลับ → ISP หา IP → Web Browser แสดงผล",
+        "Client → ISP → DNS Server หา IP → Request ไปยัง IP ผ่าน Backbone → Google ส่ง Data กลับ → Browser แสดงผล"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ THE INTERNET: Client ส่งความต้องการผ่าน ISP, DNS Server หาว่า google.com มี IP อะไร (หน้า 6), Direct request ไปยัง IP ผ่าน Internet backbone และ Google ส่งข้อมูลกลับ (หน้า 7) แล้วแสดงผลผ่าน Web Browser (หน้า 8)",
+      "choiceNotes": [
+        "Google จะส่งข้อมูลกลับได้ก็ต่อเมื่อได้รับ Request ที่ส่งไปยัง IP แล้ว ดังนั้น DNS ต้องหา IP ให้ได้ก่อนขั้นนี้",
+        "การหา IP ต้องเกิดก่อนการส่ง Request และการแสดงผลเป็นขั้นสุดท้าย",
+        "ต้องหา IP ให้ได้ก่อน Google จึงจะได้รับ Request และส่งข้อมูลกลับ และผู้หา IP คือ DNS ไม่ใช่ ISP",
+        null
+      ],
+      "source": {
+        "doc": "fe",
+        "pages": [
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "id": "Q42",
+      "difficulty": "hard",
+      "topic": "html",
+      "question": "ข้อใดเรียงลำดับคำสั่ง Git สำหรับอัปโหลดโปรเจกต์ขึ้น GitHub \"ครั้งแรก\" ได้ถูกต้องตามสไลด์",
+      "choices": [
+        "git add . → git init → git commit -m \"first commit\" → git branch -M main → git push -u origin main",
+        "git init → git add . → git commit -m \"first commit\" → git push → git remote add origin <url>",
+        "git init → git add . → git commit -m \"first commit\" → git branch -M main → git remote add origin <url> → git push -u origin main",
+        "git init → git remote add origin <url> → git push -u origin main → git add . → git commit -m \"first commit\""
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ Git Command (init) เรียง git init, git add ., git commit -m \"first commit\", git branch -M main, git remote add origin ..., git push -u origin main ทำครั้งแรกครั้งเดียว ส่วนครั้งต่อไปใช้ git add . / git commit -m / git push (หน้า 43)",
+      "choiceNotes": [
+        "git add ใช้ได้หลัง git init และลำดับนี้ขาด git remote add origin",
+        "ต้องผูก remote ด้วย git remote add origin ก่อน push ครั้งแรก git push สั้น ๆ ใช้สำหรับการอัปเดตครั้งต่อไป (หน้า 43)",
+        null,
+        "ต้อง add และ commit ก่อน push เพราะยังไม่มี commit ให้ส่งขึ้นไป"
+      ],
+      "source": {
+        "doc": "html",
+        "pages": [
+          41,
+          43
+        ]
+      }
+    },
+    {
+      "id": "Q43",
+      "difficulty": "hard",
+      "topic": "css",
+      "question": "ใน [PA 4.4] Move the Cloud ทำไมต้องกำหนด .top-container { position: relative; } ก่อนกำหนด .top-cloud { position: absolute; top: 50px; right: 300px; }",
+      "choices": [
+        "เพราะ relative ที่ parent ทำให้ลูกทุกตัวหลุดออกจาก flow แล้วซ้อนกันอยู่มุมบนซ้าย",
+        "เพราะ absolute อิง ancestor ที่ใกล้ที่สุดซึ่งกำหนด position ไว้",
+        "เพราะ absolute อ้างอิงตำแหน่งเดิมของตัวเองเสมอ relative แค่เปิดใช้งาน top/right",
+        "เพราะถ้าไม่ใส่ relative เมฆจะยึดกับ viewport และไม่เลื่อนตามหน้า แบบ fixed"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ POSITION: Absolute is positioned relative to the nearest positioned ancestor และ if an absolute positioned element has no positioned ancestors, it uses the document body (สไลด์ 116) สไลด์ 131 สรุปว่าใส่ relative ที่ top-container เพื่อให้ <img> ใช้ตำแหน่งของ div นี้ ไม่เช่นนั้นจะใช้ Body",
+      "choiceNotes": [
+        "การหลุดจาก flow เกิดกับ element ที่เป็น absolute เอง ส่วน relative ไม่ส่งผลต่อ flow",
+        null,
+        "การอ้างอิงตำแหน่งเดิมของตัวเองคือ relative positioning ไม่ใช่ absolute",
+        "การยึดกับ viewport เป็นพฤติกรรมของ fixed ส่วน absolute ที่ไม่มี positioned ancestor จะใช้ body และเลื่อนตามหน้า (สไลด์ 116)"
+      ],
+      "source": {
+        "doc": "css",
+        "pages": [
+          105,
+          114,
+          116,
+          131
+        ]
+      }
+    },
+    {
+      "id": "Q44",
+      "difficulty": "hard",
+      "topic": "css",
+      "question": "ให้ 1em = 16px เป็นค่าเริ่มต้นของเบราว์เซอร์ จากโค้ดด้านล่าง h1 มีขนาดเท่าใด และถ้าเปลี่ยนเป็น font-size: 5.625rem จะได้เท่าใด",
+      "code": "body {\n  font-size: 2em;\n}\nh1 {\n  font-size: 5.625em;\n}",
+      "choices": [
+        "180px และ 90px",
+        "180px และ 180px",
+        "90px และ 180px",
+        "90px และ 90px"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ INHERITED VALUE: h1 เป็น child ของ body จึงสืบทอด font-size มา ได้ 2 × 5.625em = 180px ส่วน rem (root em) สนแต่ขนาดของ root ไม่สนใจ parent ดังนั้น 5.625rem = 90px",
+      "choiceNotes": [
+        null,
+        "rem สนแต่ขนาดของ root ไม่สนใจ body ที่เป็น parent",
+        "สลับกัน: em สืบทอดขนาดจาก parent ส่วน rem อิง root",
+        "ลืมว่า em ของ h1 คูณกับ 2em ที่สืบทอดจาก body"
+      ],
+      "source": {
+        "doc": "css",
+        "pages": [
+          155,
+          156,
+          158,
+          159
+        ]
+      }
+    },
+    {
+      "id": "Q45",
+      "difficulty": "hard",
+      "topic": "css",
+      "question": "body มี text-align: center; แต่เมื่อกำหนด h1 { width: 10%; } แล้ว h1 ไม่อยู่กึ่งกลาง ควรแก้อย่างไร",
+      "code": "body { margin: 0; text-align: center; }\nh1 { width: 10%; }",
+      "choices": [
+        "เพิ่ม text-align: center; ให้ h1 อีกครั้งพร้อม !important เพื่อให้ชนะกฎเดิม",
+        "ใช้ margin: 0 auto; จัดกล่อง h1 ให้อยู่กลาง",
+        "เปลี่ยน width: 10%; เป็นหน่วย px เพราะ % ทำให้คำนวณจุดกึ่งกลางไม่ได้",
+        "ใช้ position: fixed; กับ h1"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ PROBLEM ระบุว่า text-align:center ใช้ได้เมื่อ Element ไม่มีการระบุขนาด ถ้าระบุขนาดให้ใช้ margin: 0 auto 0 auto; หรือ margin: 0 auto; (สไลด์ 122 จัดกึ่งกลางด้วย body { margin: 0; text-align: center; })",
+      "choiceNotes": [
+        "text-align จัดข้อความภายในกล่อง แต่ไม่ย้ายกล่อง h1 ที่กว้าง 10% ไปกลางหน้า",
+        null,
+        "ไม่ว่าหน่วยใด เมื่อระบุขนาด text-align ของ body ก็ยังไม่จัดกล่องให้อยู่กลาง",
+        "fixed ยึดตำแหน่งกับ viewport ไม่ได้ทำให้อยู่กึ่งกลาง"
+      ],
+      "source": {
+        "doc": "css",
+        "pages": [
+          122,
+          124,
+          125
+        ]
+      }
+    },
+    {
+      "id": "Q46",
+      "difficulty": "hard",
+      "topic": "bs",
+      "question": "ทุก div มี class=\"col-lg-3 col-md-4 col-sm-6\" ถ้า viewport กว้าง 800px จะเรียงได้กี่คอลัมน์ต่อแถว",
+      "choices": [
+        "2 คอลัมน์ เพราะ 800px ยังเป็นจอเล็ก จึงใช้ col-sm-6",
+        "3 คอลัมน์ ตาม col-md-4",
+        "4 คอลัมน์ เพราะ class ที่เขียนไว้ก่อน (col-lg-3) มีผลก่อน",
+        "1 คอลัมน์ เพราะไม่ตรงขนาดใดเลย"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ระบุว่า col-lg-3 ใช้เมื่อ viewport ≥ 992px ใช้ 3 หน่วย, col-md-4 ใช้เมื่อ ≥ 768px ใช้ 4 หน่วย และ col-sm-6 ใช้เมื่อ ≥ 576px ใช้ 6 หน่วย ที่ 800px จึงใช้ col-md-4 ได้ 12 ÷ 4 = 3 คอลัมน์",
+      "choiceNotes": [
+        "800px ใหญ่กว่า md (768px) จึงใช้ col-md-4 ที่เฉพาะเจาะจงกว่า",
+        null,
+        "col-lg-3 ใช้เมื่อ viewport ≥ 992px ซึ่ง 800px ยังไม่ถึง",
+        "800px เข้าเงื่อนไขทั้ง sm และ md จึงไม่ใช่ 12 หน่วยเต็มแถว"
+      ],
+      "source": {
+        "doc": "bs",
+        "pages": [
+          95,
+          97,
+          100
+        ]
+      }
+    },
+    {
+      "id": "Q47",
+      "difficulty": "hard",
+      "topic": "bs",
+      "question": "Navbar ใช้ class=\"navbar navbar-expand-lg\" เมนูเรียงแนวนอนบน Laptop แต่เป็นแนวตั้งบน Tablet (768px) ถ้าต้องการให้ Tablet เรียงแนวนอนด้วย ควรเปลี่ยนเป็น class ใด",
+      "choices": [
+        "navbar-expand-md",
+        "navbar-expand-xl",
+        "navbar-dark bg-dark",
+        "navbar-toggler ms-auto"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ NAVBAR ระบุว่าแก้เมนูแนวตั้งด้วย .navbar-expand{-sm|-md|-lg|-xl|-xxl} โดย navbar-expand-lg เรียงแนวนอนเฉพาะจอ lg และเมื่อเปลี่ยนเป็น navbar-expand-md ขนาด Tablet (768) ก็เรียงแนวนอนได้",
+      "choiceNotes": [
+        null,
+        "xl ใหญ่กว่า lg ทำให้ต้องใช้จอใหญ่ขึ้นอีกจึงจะเรียงแนวนอน",
+        "เปลี่ยนแค่สีของ Navbar (สไลด์ 60) ไม่เกี่ยวกับการเรียงแนวนอน",
+        "เป็นปุ่ม Hamburger สำหรับย่อเมนูและการจัดตำแหน่ง ไม่ได้ทำให้เมนูขยายแนวนอน"
+      ],
+      "source": {
+        "doc": "bs",
+        "pages": [
+          52,
+          54,
+          55,
+          56
+        ]
+      }
+    },
+    {
+      "id": "Q48",
+      "difficulty": "hard",
+      "topic": "js",
+      "question": "จากโค้ด FizzBuzz ด้านล่าง ค่าที่ถูก push เมื่อ count = 10, 12, 15 คือข้อใด และถ้าย้ายเงื่อนไข % 3 ขึ้นไปไว้บรรทัดแรก ค่าของ 15 จะเปลี่ยนเป็นอะไร",
+      "code": "while (count <= until) {\n  if (count % 3 === 0 && count % 5 === 0) output.push(\"FizzBuzz\");\n  else if (count % 5 === 0) output.push(\"Buzz\");\n  else if (count % 3 === 0) output.push(\"Fizz\");\n  else output.push(count);\n  count++;\n}",
+      "choices": [
+        "\"Buzz\", \"Fizz\", \"FizzBuzz\" และถ้าย้ายเงื่อนไข 15 จะกลายเป็น \"Fizz\"",
+        "\"Fizz\", \"Buzz\", \"FizzBuzz\" และ 15 ยังเป็น \"FizzBuzz\"",
+        "10, 12, \"FizzBuzz\" และ 15 จะกลายเป็น \"Buzz\"",
+        "\"Buzz\", \"Fizz\", \"FizzBuzz\" และ 15 ยังเป็น \"FizzBuzz\""
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ FIZZBUZZ ตรวจ count % 3 === 0 && count % 5 === 0 ก่อน แล้วจึง % 5 และ % 3 ทำให้ 10 → Buzz, 12 → Fizz, 15 → FizzBuzz (กติกาในสไลด์ 58) ใน if-else จะทำเฉพาะเงื่อนไขแรกที่เป็นจริง ถ้าตรวจ % 3 ก่อน 15 จึงได้ Fizz",
+      "choiceNotes": [
+        null,
+        "10 หาร 5 ลงตัว (Buzz), 12 หาร 3 ลงตัว (Fizz) และ if-else จะหยุดที่เงื่อนไขแรกที่เป็นจริง",
+        "10 และ 12 หารลงตัวจึงถูกแทนด้วยคำ และ % 3 มาก่อน % 5 จึงได้ Fizz",
+        "ถ้า % 3 อยู่บรรทัดแรก 15 จะเข้าเงื่อนไขนั้นก่อนและหยุด จึงได้ Fizz"
+      ],
+      "note": "ผลของการสลับลำดับเงื่อนไขอนุมานจากการทำงานของ if-else ในสไลด์ ไม่ได้มีตัวอย่างนี้ในสไลด์โดยตรง",
+      "source": {
+        "doc": "js",
+        "pages": [
+          47,
+          58,
+          65
+        ]
+      }
+    },
+    {
+      "id": "Q49",
+      "difficulty": "hard",
+      "topic": "js",
+      "question": "Love Calculator ต้องการคะแนนจำนวนเต็มตั้งแต่ 0 ถึง 100 (รวม 0 และ 100) ควรใช้นิพจน์ใด",
+      "choices": [
+        "Math.round(Math.random() * 100)",
+        "Math.floor(Math.random() * 101)",
+        "Math.floor(Math.random() * 100)",
+        "Math.floor(Math.random() * 100) + 1"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์การสุ่ม 0 - 100 ใช้ Math.floor(Math.random() * 101) เพราะ Math.random() ได้ 0 ถึงน้อยกว่า 1 คูณ 101 แล้วปัดลงจึงได้ 0–100 (เทียบกับลูกเต๋าในสไลด์ 43)",
+      "choiceNotes": [
+        "ได้ช่วง 0–100 ก็จริง แต่ 0 กับ 100 มีโอกาสออกเพียงครึ่งหนึ่งของเลขอื่น และไม่ใช่วิธีในสไลด์",
+        null,
+        "ได้สูงสุดแค่ 99 เพราะ Math.random() น้อยกว่า 1 เสมอ",
+        "ได้ 1–100 จึงไม่มีโอกาสได้ 0"
+      ],
+      "note": "เรื่องโอกาสไม่เท่ากันของ Math.round เป็นความรู้เสริมนอกสไลด์",
+      "source": {
+        "doc": "js",
+        "pages": [
+          43,
+          45
+        ]
+      }
+    },
+    {
+      "id": "Q50",
+      "difficulty": "hard",
+      "topic": "dom",
+      "question": "จากโค้ดด้านล่าง การเติม () หลัง handleClick ทำให้เกิดอะไรขึ้น",
+      "code": "document.querySelector(\"button\").addEventListener(\"click\", handleClick());",
+      "choices": [
+        "handleClick ถูกเรียกทันทีตอนโหลดสคริปต์ ไม่รอคลิก",
+        "handleClick ถูกเรียกทุกครั้งที่คลิกตามปกติ เพราะ () ไม่มีผลกับ event listener",
+        "addEventListener ตัด () ออกให้อัตโนมัติจึงไม่มีผล",
+        "เบราว์เซอร์เรียก handleClick 2 ครั้งต่อการคลิก"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ EVENT LISTENER ถามว่าทำไมไม่เติม () และระบุว่าการเติมคือ Direct Method Call แบบที่ถูกคือส่ง handleClick ซึ่งจะถูกเรียกเมื่อมีการ click ที่ button (สไลด์ 82–83)",
+      "choiceNotes": [
+        null,
+        "() คือการเรียกฟังก์ชันทันที สิ่งที่ส่งเข้า addEventListener คือผลลัพธ์ ไม่ใช่ตัวฟังก์ชัน",
+        "JavaScript ประเมิน handleClick() ก่อนส่งค่าเข้าไป ไม่มีการตัดออกให้",
+        "ไม่ได้ผูกฟังก์ชันไว้กับการคลิกเลย จึงไม่มีการเรียกตอนคลิก"
+      ],
+      "source": {
+        "doc": "dom",
+        "pages": [
+          79,
+          81,
+          82,
+          83
+        ]
+      }
+    },
+    {
+      "id": "Q51",
+      "difficulty": "hard",
+      "topic": "dom",
+      "question": "ทำไมคำสั่งด้านล่างจึงไม่เปลี่ยนข้อความบนปุ่ม และต้องแก้อย่างไร",
+      "code": "document.getElementsByClassName(\"btn\").innerHTML = \"กดปุ่ม\";",
+      "choices": [
+        "ได้ HTMLCollection ต้องระบุ index เช่น [0] ก่อน",
+        "ต้องเรียก .click() ก่อนจึงจะเปลี่ยนข้อความได้",
+        "ต้องเปลี่ยน innerHTML เป็น textContent จึงจะทำงาน",
+        "class \"btn\" สงวนไว้สำหรับ Bootstrap จึงเลือกด้วย JavaScript ไม่ได้"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ระบุว่าไม่มีอะไรเกิดขึ้นเพราะผลจาก getElementsByClassName ออกมาเป็น Array (HTMLCollection) ต้องใช้ document.getElementsByClassName(\"btn\")[0].innerHTML = \"กดปุ่ม\"",
+      "choiceNotes": [
+        null,
+        ".click() คือ method สำหรับจำลองการคลิก ไม่เกี่ยวกับการตั้งค่า innerHTML",
+        "ปัญหาอยู่ที่ได้กลุ่มของ element ไม่ใช่ property ที่ใช้ textContent ก็เจอปัญหาเดียวกัน",
+        "สไลด์เลือก class btn ได้ปกติ ผลออกมาเป็น HTMLCollection [button.btn, ...]"
+      ],
+      "source": {
+        "doc": "dom",
+        "pages": [
+          42,
+          43
+        ]
+      }
+    },
+    {
+      "id": "Q52",
+      "difficulty": "hard",
+      "topic": "dom",
+      "question": "จากโค้ดด้านล่าง calculator(55, 66, multiply) ได้ผลเท่าใด และ calculator จัดเป็นฟังก์ชันประเภทใด",
+      "code": "function add(num1, num2) { return num1 + num2; }\nfunction multiply(num1, num2) { return num1 * num2; }\nfunction calculator(num1, num2, operator) {\n  return operator(num1, num2);\n}\ncalculator(55, 66, multiply);",
+      "choices": [
+        "3630 และเป็น Higher Order Function",
+        "121 และเป็น Callback Function เพราะถูกเรียกกลับภายหลัง",
+        "3630 และเป็น Anonymous Function",
+        "121 และเป็น Arrow Function"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ PASSING FUNCTIONS AS ARGUMENTS แสดง calculator(55,66,multiply) ได้ 3630 และสไลด์ HIGHER ORDER FUNCTION นิยามว่าเป็นฟังก์ชันที่รับฟังก์ชันอื่นเป็น input ส่วนสไลด์ 118 นิยาม callback ว่าเป็นฟังก์ชันที่ถูกส่งเป็น argument",
+      "choiceNotes": [
+        null,
+        "operator คือ multiply จึงได้ 55 × 66 = 3630 ส่วน callback คือ multiply ที่ถูกส่งเข้าไป ไม่ใช่ calculator",
+        "calculator มีชื่อ จึงไม่ใช่ Anonymous Function (สไลด์ 82)",
+        "ไม่ได้เขียนด้วย => และผลลัพธ์ไม่ใช่ผลบวก"
+      ],
+      "source": {
+        "doc": "dom",
+        "pages": [
+          90,
+          92,
+          118
+        ]
+      }
+    },
+    {
+      "id": "Q53",
+      "difficulty": "hard",
+      "topic": "node",
+      "question": "เรียก fs.writeFile และ fs.readFile ของ 4 ไฟล์ต่อกันแบบไม่ซ้อนใน callback (แบบขนาน) แล้วรันหลายครั้ง ข้อใดถูกต้อง",
+      "choices": [
+        "Node.js จะ error เพราะเรียก fs หลายครั้งพร้อมกันไม่ได้",
+        "ลำดับอาจเปลี่ยนทุกครั้ง ต้องทำแบบ Serial หรือ async/await",
+        "ใช้ callback ซ้อนกันหลายชั้นดีที่สุดเสมอ เพราะอ่านง่ายที่สุด",
+        "ผลจะออกตามลำดับบรรทัดเสมอ เพราะ Node.js ทำงานทีละบรรทัดแบบ Synchronous"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ BE1 แสดง Asynchronous แบบขนาน (หน้า 32–33) และแบบ Serial ที่ซ้อน readFile ใน callback ของ writeFile (หน้า 31, 34) Lab 1 ให้รัน 4 ครั้งเพื่อดูลำดับ (หน้า 42) และหน้า 37 ใช้ Async/Await แก้ Callback Hell",
+      "choiceNotes": [
+        "สไลด์รันตัวอย่างแบบขนานได้ปกติ (หน้า 32–33)",
+        null,
+        "การซ้อนหลายชั้นคือ Callback Hell (หน้า 36) สไลด์จึงเสนอ async/await (หน้า 37)",
+        "fs.writeFile/readFile เป็น Asynchronous non-blocking คำสั่งถัดไปจึงเริ่มโดยไม่รอ"
+      ],
+      "source": {
+        "doc": "be1",
+        "pages": [
+          8,
+          31,
+          32,
+          33,
+          34,
+          36,
+          37,
+          42
+        ]
+      }
+    },
+    {
+      "id": "Q54",
+      "difficulty": "hard",
+      "topic": "bp",
+      "question": "ผู้ใช้กรอก 7 และ 11 แล้วกด Calculate ก่อนแก้โค้ด (ยังไม่ใช้ Number) server จะตอบอะไร",
+      "code": "app.post(\"/\", (req, res) => {\n  var num1 = req.body.num1;\n  var num2 = req.body.num2;\n  var result = num1 + num2;\n  res.send(\"The calculation result is : \" + result);\n});",
+      "choices": [
+        "The calculation result is : 711",
+        "The calculation result is : 18",
+        "The calculation result is : NaN",
+        "Cannot POST /"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ \"พบปัญหาหรือไม่?\" ระบุว่าข้อมูลที่อ่านจาก req.body เป็น String ดังนั้น num1 + num2 จึงต่อข้อความ \"7\" + \"11\" = \"711\" วิธีแก้คือ Number(req.body.num1) (หน้า 44)",
+      "choiceNotes": [
+        null,
+        "18 คือผลหลังแก้ด้วย Number() แล้ว (หน้า 44–45)",
+        "NaN เกิดจากการคำนวณที่ไม่ใช่ตัวเลข แต่ + ระหว่าง String สองตัวคือการต่อข้อความ",
+        "โค้ดมี app.post(\"/\") แล้ว และใช้ body-parser อ่าน req.body ได้"
+      ],
+      "note": "ค่า \"711\" เป็นผลของการต่อ String ใน JavaScript สไลด์บอกสาเหตุ (ข้อมูลเป็น String) แต่ไม่ได้พิมพ์ผลนี้ไว้ตรง ๆ",
+      "source": {
+        "doc": "be2",
+        "pages": [
+          42,
+          43,
+          44
+        ]
+      }
+    },
+    {
+      "id": "Q55",
+      "difficulty": "hard",
+      "topic": "api",
+      "question": "หลักการ Stateless ของ REST API หมายความว่าอย่างไร",
+      "choices": [
+        "Client ต้องเชื่อมต่อฐานข้อมูลโดยตรงด้วย SQL Query",
+        "ทุก Request ต้องแนบข้อมูลครบเอง เช่น JWT Token",
+        "API ตอบกลับได้เฉพาะ HTML เพราะไม่เก็บสถานะ",
+        "เซิร์ฟเวอร์จำสถานะการล็อกอินไว้ใน Session จึงไม่ต้องส่ง Token ซ้ำ"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ REST APIs ระบุว่า Stateless คือเซิร์ฟเวอร์ไม่เก็บข้อมูลสถานะของ Client แต่ละคำขอต้องครบถ้วนและเป็นอิสระจากกัน สไลด์ 39 ยกตัวอย่าง Authorization: Bearer <JWT-Token> ที่ตรวจสิทธิ์ได้โดยไม่ต้องเก็บ Session",
+      "choiceNotes": [
+        "นั่นคือรูปแบบ \"ถ้าไม่มี APIs\" ที่สไลด์ชี้ปัญหาไว้ (หน้า 18–24)",
+        null,
+        "REST API ตอบกลับเป็น JSON หรือ XML ได้ และไม่เกี่ยวกับ Stateless",
+        "ตรงข้ามกับ Stateless ที่ระบุว่าเซิร์ฟเวอร์ไม่เก็บสถานะ"
+      ],
+      "source": {
+        "doc": "be3",
+        "pages": [
+          38,
+          39
+        ]
+      }
+    },
+    {
+      "id": "Q56",
+      "difficulty": "hard",
+      "topic": "db",
+      "question": "ตาราง users มี 3 แถว (id 1, 2, 3 ตามลำดับ) คำสั่งด้านล่างจะได้แถวใด",
+      "code": "select * from users\nlimit 1 offset 1;",
+      "choices": [
+        "แถว id = 3",
+        "แถว id = 1 และ 2",
+        "แถว id = 2",
+        "แถว id = 1"
+      ],
+      "answer": 2,
+      "explanation": "สไลด์ SQL: LIMIT จำกัดจำนวน row และสไลด์ LIMIT, OFFSET อธิบายว่า offset ใช้ข้าม row ที่อยู่บน ๆ คำสั่งนี้จึงข้าม 1 แถวแล้วแสดง 1 แถว (1 row in set)",
+      "choiceNotes": [
+        "offset 1 ข้ามแค่ 1 แถว จึงเริ่มที่แถวที่สอง",
+        "limit 1 จำกัดให้ได้เพียง 1 แถว",
+        null,
+        "offset 1 ข้ามแถวแรกไปแล้ว"
+      ],
+      "source": {
+        "doc": "be4",
+        "pages": [
+          108,
+          109
+        ]
+      }
+    },
+    {
+      "id": "Q57",
+      "difficulty": "hard",
+      "topic": "db",
+      "question": "ตาราง persons มี unique (first_name, last_name) และมี ('John', 'Lennon', 40) อยู่แล้ว INSERT ใดจะได้ ERROR 1062 Duplicate entry",
+      "code": "create table persons (\n  first_name varchar(60) not null,\n  last_name  varchar(60) not null,\n  age int,\n  unique (first_name, last_name)\n);",
+      "choices": [
+        "('John', 'Lennon ', 40) ที่มีช่องว่างต่อท้าย last_name",
+        "('John', 'Lennon', 14)",
+        "('Paul', 'Lennon', 40)",
+        "('John', 'F. Kennedy', 46)"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์ SQL: UNIQUE ระบุว่า first_name และ last_name ทั้งคู่ห้ามซ้ำกัน แต่ first_name ซ้ำได้ถ้า last_name ไม่ซ้ำ สไลด์ 140 แสดงว่า John F. Kennedy insert ได้ แต่ John Lennon อายุ 14 ได้ ERROR 1062 Duplicate entry 'John-Lennon' (อายุไม่อยู่ใน unique จึงไม่ช่วย)",
+      "choiceNotes": [
+        "ข้อนี้ขึ้นกับการตั้งค่า collation ของ MySQL ซึ่งสไลด์ไม่ได้สอน ส่วนกรณีที่สไลด์แสดงว่า error แน่นอนคือ ('John', 'Lennon', 14)",
+        null,
+        "last_name ซ้ำแต่ first_name ต่างกัน คู่ (first_name, last_name) จึงไม่ซ้ำ",
+        "first_name ซ้ำได้ถ้า last_name ไม่ซ้ำ สไลด์ 140 แสดงว่า insert สำเร็จ"
+      ],
+      "source": {
+        "doc": "be4",
+        "pages": [
+          139,
+          140
+        ]
+      }
+    },
+    {
+      "id": "Q58",
+      "difficulty": "hard",
+      "topic": "db",
+      "question": "ข้อใดออกแบบความสัมพันธ์ระหว่างตารางได้ถูกต้องตามสไลด์",
+      "choices": [
+        "1:N ใส่ PK ฝั่ง one เป็น FK ฝั่ง many / M:N ใช้ตารางกลาง",
+        "1:N ใส่ PK ฝั่ง many เป็น FK ฝั่ง one / M:N ใช้ตารางกลาง",
+        "1:N ใส่ PK ฝั่ง one เป็น FK ฝั่ง many / M:N ใส่ FK ฝั่งใดฝั่งหนึ่งก็พอ",
+        "1:N ต้องสร้างตารางกลางเสมอ / M:N ใส่ FK ทั้งสองฝั่ง"
+      ],
+      "answer": 0,
+      "explanation": "สไลด์ความสัมพันธ์ระหว่างตาราง: One-to-one เพิ่ม Foreign key ไปอีกตารางหนึ่ง (สไลด์ 151), One-to-many นำ primary key ของฝั่ง one ไปใส่เป็น foreign key ของฝั่ง many (สไลด์ 153), Many-to-many เพิ่มตารางกลางเป็นตัวบอกความสัมพันธ์ (สไลด์ 155)",
+      "choiceNotes": [
+        null,
+        "สลับฝั่ง: ฝั่ง one มีหนึ่งแถวแต่ต้องอ้างถึงหลายแถว จึงเก็บ FK ไว้ไม่ได้",
+        "การใส่ FK ในตารางใดก็ได้คือวิธีของ One-to-one (สไลด์ 151) Many-to-many ต้องมีตารางกลาง",
+        "One-to-many ไม่ต้องมีตารางกลาง แค่นำ PK ฝั่ง one ไปเป็น FK ฝั่ง many ส่วน Many-to-many ต้องเพิ่มตารางกลาง ไม่ใช่ใส่ FK ทั้งสองฝั่ง (สไลด์ 153, 155)"
+      ],
+      "source": {
+        "doc": "be4",
+        "pages": [
+          151,
+          153,
+          155
+        ]
+      }
+    },
+    {
+      "id": "Q59",
+      "difficulty": "hard",
+      "topic": "mongo",
+      "question": "ทำไม Basic Authentication ที่ส่ง Username/Password แบบเข้ารหัส Base64 จึงไม่ปลอดภัย",
+      "choices": [
+        "Base64 ใส่ Salt สุ่มทุกครั้ง ทำให้ผู้ใช้ล็อกอินไม่ได้",
+        "Base64 เป็น Hash แบบ one-way ทำให้ server ตรวจรหัสผ่านไม่ได้",
+        "Base64 ทำให้ข้อความยาวเกินที่ HTTP รองรับ",
+        "Base64 เป็นแค่ encoding ที่ถอดกลับได้"
+      ],
+      "answer": 3,
+      "explanation": "สไลด์ Base64 แสดงว่า Many hands make light work. ถูก encode เป็น TWFueSBoYW5k... และระบุว่าปัญหาคือเป็นการส่งแบบ plain text มีโอกาสโดน packet sniffing และถูก decode ได้สูง (หน้า 46 จัดเป็น Basic Authentication)",
+      "choiceNotes": [
+        "Salt เป็นเรื่องของ password hashing (หน้า 50) ไม่เกี่ยวกับ Base64",
+        "Base64 ไม่ใช่ hash ถอดกลับได้ด้วย Base64 Decoder (หน้า 45)",
+        "สไลด์ไม่ได้ชี้ปัญหาเรื่องความยาว ปัญหาคือถอดกลับได้ง่าย",
+        null
+      ],
+      "source": {
+        "doc": "be7",
+        "pages": [
+          43,
+          44,
+          45,
+          46
+        ]
+      }
+    },
+    {
+      "id": "Q60",
+      "difficulty": "hard",
+      "topic": "mongo",
+      "question": "ผู้ใช้ 2 คนตั้งรหัสผ่านเหมือนกันคือ password123 วิธีใดทำให้ค่าที่เก็บในฐานข้อมูลไม่เหมือนกันและย้อนกลับไม่ได้",
+      "choices": [
+        "เก็บเป็น plain text แต่ซ่อนไว้ในไฟล์ .env",
+        "เพิ่ม Salt แล้วจึง Hash (เช่น bcrypt)",
+        "Encode ด้วย Base64 ก่อนเก็บ",
+        "Hash ด้วย SHA-256 อย่างเดียว เพราะ Hash ย้อนกลับไม่ได้อยู่แล้ว"
+      ],
+      "answer": 1,
+      "explanation": "สไลด์อธิบายว่า Hashing เป็น one way แต่ password เดียวกันมีโอกาสได้ hash เหมือนกัน (หน้า 49) Salting เพิ่ม Salt แล้ว hash จะได้ output ต่างกัน (หน้า 50) และหน้า 53 แสดงว่า password123 ของ 2 user ได้ค่า Hash ต่างกันเมื่อใช้ bcrypt (หน้า 52)",
+      "choiceNotes": [
+        ".env ใช้เก็บ secret ของระบบ เช่นรหัสฐานข้อมูล ไม่ใช่รหัสผ่านของผู้ใช้แต่ละคน",
+        null,
+        "Base64 ถอดกลับได้ และ input เดียวกันได้ผลเดียวกัน",
+        "ย้อนกลับไม่ได้ก็จริง แต่ password เดียวกันจะได้ hash เหมือนกัน (หน้า 49)"
+      ],
+      "source": {
+        "doc": "be7",
+        "pages": [
+          47,
+          49,
+          50,
+          52,
+          53
+        ]
+      }
+    }
+  ]
+}

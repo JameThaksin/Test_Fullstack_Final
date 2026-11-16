@@ -1,0 +1,163 @@
+<!DOCTYPE html> 
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Stack Exam Quest</title>
+  <meta name="description" content="ข้อสอบทบทวน Full Stack Web Development 60 ข้อ (Easy / Medium / Hard) อ้างอิงสไลด์ประจำวิชา">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236b8cff'/%3E%3Cstop offset='1' stop-color='%2363d3c6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M32 14l4.5 13.5L50 32l-13.5 4.5L32 50l-4.5-13.5L14 32l13.5-4.5z' fill='%23101830'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">✦</div>
+        <div>
+          <h1 class="brand-title">FULL STACK EXAM QUEST</h1>
+          <p class="brand-sub">Full Stack Web Development</p>
+        </div>
+      </div>
+      <div class="header-pill">ชุดฝึกทบทวน • อ้างอิงสไลด์ประจำวิชา</div>
+    </header>
+
+    <!-- ===== Main layout ===== -->
+    <div class="layout" id="layout">
+      <main class="main-col" id="mainCol">
+        <!-- Exam / review / practice view -->
+        <section id="examView" class="view hidden" aria-live="polite">
+          <div class="exam-top">
+            <div>
+              <p class="q-counter" id="qCounter">คำถามที่ 1 / 60</p>
+              <p class="taker">ผู้ทำ: <span id="takerName">-</span> <button class="link-btn" id="editNameBtn" type="button">แก้ไข</button></p>
+            </div>
+            <div class="top-right">
+              <span class="mode-chip hidden" id="modeChip"></span>
+              <div class="answered-pill" id="answeredPill">ตอบแล้ว <b id="answeredCount">0</b> / <span id="answeredTotal">60</span></div>
+            </div>
+          </div>
+          <div class="progress" role="progressbar" aria-label="ความคืบหน้า" aria-valuemin="0" aria-valuemax="100" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+
+          <div class="review-filter hidden" id="reviewFilter" role="tablist" aria-label="กรองข้อ">
+            <button type="button" class="chip active" data-filter="all">ทั้งหมด</button>
+            <button type="button" class="chip" data-filter="wrong">ตอบผิด</button>
+            <button type="button" class="chip" data-filter="unanswered">ไม่ได้ตอบ</button>
+            <button type="button" class="chip" data-filter="marked">ทำเครื่องหมายไว้</button>
+          </div>
+
+          <article class="q-card" id="qCard">
+            <div class="badges">
+              <span class="badge diff" id="diffBadge">Easy</span>
+              <span class="badge topic" id="topicBadge">HTML</span>
+              <span class="badge marked-badge hidden" id="markedBadge">★ ทบทวน</span>
+            </div>
+            <h2 class="q-text" id="qText">กำลังโหลดข้อสอบ...</h2>
+            <pre class="q-code hidden" id="qCode"><code></code></pre>
+            <div class="options" id="options" role="radiogroup" aria-labelledby="qText"></div>
+
+            <div class="feedback hidden" id="feedback">
+              <p class="feedback-title" id="feedbackTitle"></p>
+              <p class="feedback-text" id="feedbackText"></p>
+              <p class="feedback-note hidden" id="feedbackNote"></p>
+              <p class="choices-head">เหตุผลของแต่ละตัวเลือก</p>
+              <ul class="choice-reasons" id="choiceReasons"></ul>
+              <p class="feedback-source" id="feedbackSource"></p>
+            </div>
+
+            <div class="q-actions">
+              <button type="button" class="btn btn-ghost" id="prevBtn">← ย้อนกลับ</button>
+              <button type="button" class="btn btn-outline" id="markBtn"><span class="star">☆</span> <span class="lbl">ทบทวนทีหลัง</span></button>
+              <button type="button" class="btn btn-primary" id="nextBtn">ข้อถัดไป →</button>
+            </div>
+          </article>
+          <p class="kbd-hint">คีย์ลัด: <kbd>1</kbd>–<kbd>4</kbd> เลือกคำตอบ · <kbd>←</kbd> <kbd>→</kbd> เปลี่ยนข้อ · <kbd>M</kbd> ทำเครื่องหมายทบทวน</p>
+        </section>
+
+        <!-- Results view -->
+        <section id="resultView" class="view hidden">
+          <div class="result-card">
+            <p class="q-counter" id="resultEyebrow">ผลการสอบ</p>
+            <div class="result-head">
+              <div class="score-ring" id="scoreRing" style="--pct:0">
+                <div class="score-ring-inner">
+                  <span class="score-pct" id="scorePct">0%</span>
+                  <span class="score-sub" id="scoreSub">0 / 60 ข้อ</span>
+                </div>
+              </div>
+              <div class="result-summary">
+                <h2 class="result-title" id="resultTitle">ส่งข้อสอบเรียบร้อย</h2>
+                <p class="result-msg" id="resultMsg"></p>
+                <ul class="result-stats" id="resultStats"></ul>
+              </div>
+            </div>
+
+            <h3 class="section-title">คะแนนตามระดับความยาก</h3>
+            <div class="diff-bars" id="diffBars"></div>
+
+            <h3 class="section-title">คะแนนตามหมวดวิชา</h3>
+            <div class="topic-table-wrap">
+              <table class="topic-table" id="topicTable">
+                <thead><tr><th>หมวด</th><th>ถูก</th><th>ทั้งหมด</th><th>%</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <div class="result-actions">
+              <button type="button" class="btn btn-primary" id="reviewBtn">ดูเฉลยและคำอธิบาย</button>
+              <button type="button" class="btn btn-outline" id="practiceBtn">ฝึกเฉพาะข้อที่ผิด</button>
+              <button type="button" class="btn btn-ghost" id="retakeBtn">ทำข้อสอบใหม่ทั้งหมด</button>
+              <button type="button" class="btn btn-ghost hidden" id="backToExamResultBtn">กลับไปผลสอบหลัก</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Load error -->
+        <section id="errorView" class="view hidden">
+          <div class="result-card">
+            <h2 class="result-title">โหลดคลังข้อสอบไม่สำเร็จ</h2>
+            <p class="result-msg" id="errorMsg"></p>
+          </div>
+        </section>
+      </main>
+
+      <!-- ===== Navigator ===== -->
+      <aside class="nav-col" id="navCol" aria-label="ตัวเลือกข้อสอบ">
+        <div class="nav-card">
+          <h2 class="nav-title" id="navTitle">ข้อสอบทั้งหมด</h2>
+          <p class="nav-sub" id="navSub">คลิกหมายเลขเพื่อข้ามไปทำข้ออื่น</p>
+          <ul class="legend" id="legend"></ul>
+          <div class="grid" id="navGrid"></div>
+          <div class="nav-footer" id="navFooter">
+            <div class="nav-stats" id="navStats"></div>
+            <button type="button" class="btn btn-primary btn-block" id="submitBtn">ส่งข้อสอบ</button>
+            <button type="button" class="btn btn-ghost btn-block" id="restartBtn">เริ่มทำใหม่</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===== Modal ===== -->
+  <div class="modal-backdrop hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <div class="brand-logo modal-logo" aria-hidden="true">✦</div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" id="modalCancel">ยกเลิก</button>
+        <button type="button" class="btn btn-primary" id="modalOk">ตกลง</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast hidden" id="toast" role="status"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

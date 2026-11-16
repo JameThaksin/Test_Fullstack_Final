@@ -1,0 +1,11 @@
+{
+  "name": "full-stack-exam-quest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "60-question Full Stack Web Development review exam (HTML, CSS, vanilla JS, JSON question bank)",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 5500",
+    "test": "node tests/validate-bank.cjs && node tests/e2e.test.cjs"
+  }
+}
